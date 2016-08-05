@@ -1,0 +1,215 @@
+/*!
+ * Start Bootstrap - Small Business HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* body {
+    padding-top: 70px;
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; 
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+} */
+.main-container{
+	width:1000px;
+	margin:0 auto;
+}
+a:hover, a:focus{text-decoration:none !important;}
+.navbar-nav > li > a {
+    padding: 23px 30px;
+  }
+  .navbar-nav > li.active {
+	background-color:#666666 !important;
+	font-weight: 600 !important;
+	color: #fff;
+  }
+  .navbar-nav > li :hover  {
+	background-color:none !important;
+	color: #000 !important;
+  }
+  .navbar-inverse .navbar-nav > .active > a{
+	  background-color:#666666 !important;
+	  color: #fff !important;
+  }
+ .navbar-nav > li.active::after { 
+	content: '';
+    position: absolute;
+    left: 33%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #666666;
+    clear: both;
+   }
+
+.user-info .earphone{padding: 11px 14px;}
+  .user-info .circle{
+	  padding:8px;
+	  border-radius:50%;
+	  background-color:#999999;
+	  color: #fff;	  
+  }
+ .user-info .question> a, .user-info .user>a, .user-info .user>span{
+	margin-top: 2px;
+	color:#999999;
+ }
+ .user-info{
+	 float:right;
+	 padding-top:6px;
+ }
+.user-info-mobile{display:none;}
+
+   .user-info > div{
+        float: left;
+        display: inline-block;
+        padding: 8px 10px 8px 10px;
+    border-left: 1px solid #b5b5b5;
+   }
+   footer{
+	   background-color:#666666;
+	   padding:20px 0px 0px;
+	   margin-top:15px;
+   }
+
+   .footerText{
+	font-family: 'ArialMT', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+   }
+   
+   
+@media (min-width: 300px) and (max-width: 767px) {
+.main-container{
+	width:100%;
+	margin:0 auto;
+} 	
+	.user-info{
+		display:none;
+	} 
+	.navbar-inverse .navbar-nav > .active > a{
+	  background-color:#f2f2f2 !important;
+	  color: #000 !important;
+	}
+	 .navbar-nav > li.active::after { 
+	content: none;
+   }
+   .navbar-nav > li > a {
+    padding: 10px 30px;
+  }
+  .user-info-mobile{display:block;}
+  .footer-logo{ 
+	padding-left:15px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.container, .navbar {
+		width: 990px ;
+	}
+	.main-container{
+		width:100%;
+		margin:0 auto;
+	}
+}
+@media (min-width: 992px){
+	footer .col-md-3{
+		padding:0px !important;
+	}
+}
+.footer-logo{   
+	float: left;
+    padding-top: 35px;
+    font-size: 18px;
+    line-height: 30px;
+	margin-bottom:20px;
+}
+.footer-left{
+    float: left;
+    display: inline-block;
+}
+.footer-right{   
+	width: 50%;
+    float: right;
+    display: inline-block;
+	padding-top: 20px
+}
+.footer-right-left{   
+	width: 50%;
+    float: left;
+    display: inline-block;
+}
+.footer-right-right{   
+	width: 50%;
+    float: right;
+    display: inline-block;
+	text-align:right;
+}
+@media (min-width: 300px) and (max-width: 600px) {
+.main-container{
+	width:100%;
+	margin:0 auto;
+}
+.footer-right{   
+	width: 100%;
+    float: left;
+    display: inline-block;
+	padding-left:15px;
+}	
+.footer-right-left{   
+	width: 100%;
+    float: left;
+    display: inline-block;
+}
+.footer-right-right{ 
+	margin-top:20px;
+	width: 50%;
+    float: left;
+    display: inline-block;
+	text-align:left;
+}
+}
+
+.user-info .question img{ width:35px;}
+.user-info .earphone img,
+.user-info .user img {
+    width: 30px;
+	float:left;
+	display:inline-block;
+}
+.user-info .user img {margin-right:10px; margin-top: 3px;}
+
+.img-responsive{
+    height:31px;
+    width:31px;
+}
+
+.menutext{
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';
+    font-weight: 700;
+    font-style: normal;
+}

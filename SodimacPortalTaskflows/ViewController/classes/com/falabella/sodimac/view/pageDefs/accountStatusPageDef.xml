@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.20.47" id="accountStatusPageDef"
+                Package="com.falabella.sodimac.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <accessorIterator MasterBinding="SodimacAppDataControlIterator" Binds="pieList" RangeSize="-1"
+                      DataControl="SodimacAppDataControl"
+                      BeanClass="com.falabella.sodimac.model.CuentaCorrienteSaldoObtenerPie" id="pieListIterator"/>
+    <accessorIterator MasterBinding="SodimacAppDataControlIterator" Binds="list" RangeSize="25"
+                      DataControl="SodimacAppDataControl"
+                      BeanClass="com.falabella.sodimac.model.CuentaCorrienteSaldoObtenerTable" id="listIterator"/>
+    <iterator Binds="root" RangeSize="25" DataControl="SodimacAppDataControl" id="SodimacAppDataControlIterator"/>
+    <accessorIterator MasterBinding="SodimacAppDataControlIterator" Binds="pietable" RangeSize="10"
+                      DataControl="SodimacAppDataControl"
+                      BeanClass="com.falabella.sodimac.model.CuentaCorrienteSaldoObtenerPie" id="pietableIterator"/>
+    <accessorIterator MasterBinding="SodimacAppDataControlIterator" Binds="documentsRange" RangeSize="10"
+                      DataControl="SodimacAppDataControl" BeanClass="com.falabella.sodimac.model.DetalleListaType"
+                      id="documentsRangeIterator"/>
+  </executables>
+  <bindings>
+    <tree id="documents1" IterBinding="documentsRangeIterator">
+      <nodeDefinition DefName="com.falabella.sodimac.model.DetalleListaType" Name="documents10">
+        <AttrNames>
+          <Item Value="identificadorTipoDocumento"/>
+          <Item Value="diasVencido"/>
+          <Item Value="documentoEstado"/>
+          <Item Value="documentoFechaEmision"/>
+          <Item Value="documentoFechaVencimiento"/>
+          <Item Value="identificadorUnidad"/>
+          <Item Value="nombreTipoDocumento"/>
+          <Item Value="nombreUnidad"/>
+          <Item Value="numeroDocumento"/>
+          <Item Value="saldo"/>
+          <Item Value="saldoVencido"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="pieListIterator" id="pieList" ChangeEventPolicy="ppr">
+      <nodeDefinition DefName="com.falabella.sodimac.model.CuentaCorrienteSaldoObtenerPie" Name="pieList">
+        <AttrNames>
+          <Item Value="value"/>
+          <Item Value="name"/>
+          <Item Value="colorCode"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="listIterator" id="list">
+      <nodeDefinition DefName="com.falabella.sodimac.model.CuentaCorrienteSaldoObtenerTable" Name="list0">
+        <AttrNames>
+          <Item Value="tipoDeCrédito"/>
+          <Item Value="cupo"/>
+          <Item Value="utilizado"/>
+          <Item Value="porFacturar"/>
+          <Item Value="disponible"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <attributeValues IterBinding="listIterator" id="totalTipoDeCrédito">
+      <AttrNames>
+        <Item Value="totalTipoDeCrédito"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="listIterator" id="totalCupo">
+      <AttrNames>
+        <Item Value="totalCupo"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="listIterator" id="totalUtilizado">
+      <AttrNames>
+        <Item Value="totalUtilizado"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="listIterator" id="totalPorFacturar">
+      <AttrNames>
+        <Item Value="totalPorFacturar"/>
+      </AttrNames>
+    </attributeValues>
+    <attributeValues IterBinding="listIterator" id="totalDisponible">
+      <AttrNames>
+        <Item Value="totalDisponible"/>
+      </AttrNames>
+    </attributeValues>
+    <tree id="pieList1" IterBinding="pietableIterator">
+      <nodeDefinition DefName="com.falabella.sodimac.model.CuentaCorrienteSaldoObtenerPie" Name="pieList10">
+        <AttrNames>
+          <Item Value="name"/>
+          <Item Value="colorCode"/>
+          <Item Value="value"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

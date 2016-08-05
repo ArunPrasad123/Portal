@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:h="http://java.sun.com/jsf/html">
+    <!--<jsp:directive.page contentType="text/html;charset=UTF-8" />
+-->
+<af:subform id="loginForm"
+              defaultCommand="#{(o_w_wa__i_v_w_Login.OAMEnabled || o_w_wa__i_v_w_Login.WLS) ? 'submitLogin' : 'submitLoginiServlet'}">
+    <af:panelGroupLayout id="pgl5" layout="vertical" halign="center">
+        <af:panelGroupLayout id="pgl6" layout="vertical" halign="center" inlineStyle="width:960px;">
+            <af:activeImage source="/images/u51.png" id="ai1" inlineStyle="width:960px"/>
+        </af:panelGroupLayout>
+        <af:panelGridLayout id="pgl1" inlineStyle="width:960px; background-color: White;">
+            <af:gridRow marginTop="20px" height="auto" marginBottom="5px" id="gr1">
+                <af:gridCell marginStart="30px" width="50%" id="gc1" halign="center"
+                             inlineStyle=" background-color:#f2f2f2;">
+                    <af:panelGroupLayout id="pgl4" halign="center" layout="vertical"
+                                         inlineStyle="font-family: 'Arial Bold'; padding-top:30px; margin-top:5px; width:400px; height:400px; background-color:#f2f2f2;">
+                        <af:outputText id="opt2" rendered="#{sessionScope.o_w_wa_loginFailedText}"
+                                       value="#{uib_o_w_w_r_WebCenter.SORRY_INVALID_USERPASS}" styleClass="loginAlert"
+                                       binding="#{requestScope.o_w_wa_loginFailed}" clientComponent="true"/>
+                        <af:spacer id="sp3" height="10"/>
+                        <h:outputLabel value="RUT Usuario" id="ol1"
+                                       style="font-weight:bold; font-family: 'Arial'; color:#333333; padding-top:30px; margin-right:130px;font-size:14px"/>
+                        <af:spacer id="sp4" height="2"/>
+                        <f:verbatim>                         <input type="text" id="username" name="j_username"
+                                                                    placeholder="    Ejemplo:11.111.111-1"
+                                                                    maxlength="200" class="WCInputText" size="30"
+                                                                    autocomplete="off"
+                                                                    style="height:45px; width:220px; border-radius:6px 6px 6px 6px / 6px 6px 6px 6px ; font-family:Arial; font-size:16px; border-left-color:#666666; border-left-style:solid; border-left-width:thin; border-right-color:#666666; border-right-style:solid; border-right-width:thin; border-top-color:#666666; border-top-style:solid; border-top-width:thin; border-bottom-color:#666666; border-bottom-style:solid; border-bottom-width:thin; border-color:#666666; border-width:thin; border-style:solid;"/>                         <input type="hidden"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               id="wcEncoding"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               name="j_character_encoding"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               value="UTF-8"/>                     </f:verbatim>
+                        <af:spacer id="sp1" height="30"/>
+                        <h:outputLabel value="RUT Empresa" id="ol2"
+                                       style="font-weight:bold; font-family: 'Arial'; color:#333333; padding-top:30px; margin-right:125px;font-size:14px"/>
+                        <af:spacer id="sp5" height="2"/>
+                        <f:verbatim>                         <input type="text" id="enterprise"
+                                                                    placeholder="    Ejemplo:11.111.111-1"
+                                                                    maxlength="200" class="WCInputText" size="30"
+                                                                    autocomplete="off"
+                                                                    style="height:45px; width:220px; border-radius:6px 6px 6px 6px / 6px 6px 6px 6px ; font-family:Arial; font-size:16px; border-left-color:#666666; border-left-style:solid; border-left-width:thin; border-right-color:#666666; border-right-style:solid; border-right-width:thin; border-top-color:#666666; border-top-style:solid; border-top-width:thin; border-bottom-color:#666666; border-bottom-style:solid; border-bottom-width:thin; border-color:#666666; border-width:thin; border-style:solid;"/>                         <input type="hidden"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               id="wcEncoding2"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               name="j_character_encoding"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               value="UTF-8"/>                     </f:verbatim>
+                        <af:spacer id="sp2" height="30"/>
+                        <h:outputLabel value="Contrase&#241;a" id="ol3"
+                                       style="font-weight:bold; font-family: 'Arial'; color:#333333; padding-top:30px; margin-right:138px;font-size:14px"/>
+                        <af:spacer id="sp6" height="2"/>
+                        <f:verbatim>                         <input type="password" name="j_password"
+                                                                    placeholder="   Contrase&#241;a" maxlength="50"
+                                                                    class="WCInputText" size="30" autocomplete="off"
+                                                                    style="height:45px; width:220px; border-radius:6px 6px 6px 6px / 6px 6px 6px 6px ; font-family:Arial; font-size:16px; border-left-color:#666666; border-left-style:solid; border-left-width:thin; border-right-color:#666666; border-right-style:solid; border-right-width:thin; border-top-color:#666666; border-top-style:solid; border-top-width:thin; border-bottom-color:#666666; border-bottom-style:solid; border-bottom-width:thin; border-color:#666666; border-width:thin; border-style:solid;"/>                      </f:verbatim>
+                        <af:spacer id="sp7" height="2"/>
+                        <af:panelGroupLayout id="pgl3" layout="vertical" styleClass="registration"
+                                             rendered="#{WCAppContext.application.applicationConfig.publicregistrationEnabled}">
+                            <af:goLink text="#{uib_o_w_w_r_WebCenter.GLOBAL_LINK_SELFREG}"
+                                       disabled="#{security.authenticated}"
+                                       destination="/portal/system/portals_default_seflreg_page?caller=link"
+                                       shortDesc="#{uib_o_w_w_r_WebCenter.GLOBAL_LINK_SELFREG_DESC}"
+                                       styleClass="LoginLink" id="logfrmgl1"/>
+                            
+                        </af:panelGroupLayout>
+                        <af:commandButton id="submitLoginiServlet" partialSubmit="false"
+                                          disabled="#{security.authenticated}"
+                                          inlineStyle="width:220px;height:48px;font-size:18px; color:#FFFFFF; font-family:'ArialMT', 'Arial'; font-weight:400; font-style:normal; text-align:center; line-height:normal; background-color:#666666; background-repeat:no-repeat;border-radius:10px;background-image:none;text-shadow:none;margin-top:20px"
+                                          styleClass="loginbtn"
+                                          text="Ingresar">
+                            <af:clientListener type="action" method="wcPostLoginForm"/>
+                        </af:commandButton>
+                        <script id="edvkloastar94" text="
+                            function wcPostLoginForm(event)
+                            {
+                              var form = document.forms[0];
+                              form.action = 'wcAuthentication/j_security_check';
+                              form.submit();
+                              event.cancel();
+                            }
+                          "></script>
+                    </af:panelGroupLayout>
+                </af:gridCell>
+                <af:gridCell marginStart="5px" width="50%" marginEnd="5px" id="gc2" halign="center">
+                    <af:panelGroupLayout id="pgl2" layout="vertical"
+                                         inlineStyle="margin-top:20px; font-size: 14px; margin-left:5px;">
+                        <af:panelGridLayout id="pgl13">
+                            <af:gridRow marginTop="5px" height="55px" marginBottom="5px" id="gr2">
+                                <af:gridCell marginStart="5px" width="300px" marginEnd="5px" id="gc3">
+                                    <af:outputLabel value="Need help?" id="ol4" inlineStyle="font-size:large;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="35px" marginBottom="5px" id="gr3">
+                                <af:gridCell marginStart="5px" width="270px" marginEnd="5px" id="gc4"
+                                             inlineStyle="border-top:1px #CCCCCC solid !important ;">
+                                    <af:spacer width="300" height="10" id="s0"/>
+                                    <af:image source="/images/g2.png" id="i0"
+                                              inlineStyle="float: right;"/>
+                                    <af:outputFormatted value="Frequently Asked Question define 1" id="ot1"
+                                                        inlineStyle="width:250px;"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr4">
+                                <af:gridCell marginStart="5px" width="200px" marginEnd="5px" id="gc5"
+                                             inlineStyle="border-top:1px #CCCCCC solid !important ; ">
+                                    <af:spacer width="300" height="10" id="s1"/>
+                                    <af:image source="/images/g2.png" id="i1"
+                                              inlineStyle="float: right;"/>
+                                    <af:outputFormatted value="Frequently Asked Question define lorem ipsum dolor sit amet"
+                                                        id="of1"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr5">
+                                <af:gridCell marginStart="5px" width="200px" marginEnd="5px" id="gc6"
+                                             inlineStyle="border-top:1px #CCCCCC solid !important ">
+                                    <af:spacer width="300" height="10" id="s2"/>
+                                    <af:image source="/images/g2.png" id="i2"
+                                              inlineStyle="float: right;"/>
+                                    <af:outputFormatted value="Frequently Asked Question define lorem ipsum dolor sit amet"
+                                                        id="of3"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr6">
+                                <af:gridCell marginStart="5px" width="200px" marginEnd="5px" id="gc7"
+                                             inlineStyle="border-top:1px #CCCCCC solid !important ">
+                                    <af:spacer width="300" height="10" id="s3"/>
+                                    <af:image source="/images/g2.png" id="i3"
+                                              inlineStyle="float: right;"/>
+                                    <af:outputFormatted value="Frequently Asked Question define lorem ipsum dolor sit amet"
+                                                        id="of4"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="5px" height="50px" marginBottom="5px" id="gr7">
+                                <af:gridCell marginStart="5px" width="300px" marginEnd="5px" id="gc8"
+                                             inlineStyle="border-top:1px #CCCCCC solid !important ; border-bottom:1px #CCCCCC solid !important ;">
+                                    <af:spacer width="300" height="10" id="s4"/>
+                                    <af:image source="/images/g2.png" id="i4"
+                                              inlineStyle="float: right;"/>
+                                    <af:outputFormatted value="Frequently Asked Question define lorem ipsum dolor sit amet"
+                                                        id="of5"/>
+                                    <af:spacer width="300" height="10" id="s5"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                    </af:panelGroupLayout>
+                </af:gridCell>
+            </af:gridRow>
+        </af:panelGridLayout>
+        <af:panelGroupLayout id="pgl7" inlineStyle="width:960px;padding-top:80px;background-color:white;" layout="vertical" halign="center">
+            <af:panelGridLayout id="pgl8" inlineStyle="width:960px">
+                <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr8">
+                    <af:gridCell marginStart="0px" width="50%" id="gc9">
+                        <af:image source="/images/u2.png" id="i5"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc10" halign="end">
+                        <af:image source="/images/u4.png" id="i6" inlineStyle="padding-right:2px"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:panelGroupLayout>
+    </af:panelGroupLayout>
+    </af:subform>
+</jsp:root>

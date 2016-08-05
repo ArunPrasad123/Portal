@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <c:set var="viewcontrollerBundle" value="#{adfBundle['com.falabella.sodimac.view.ViewControllerBundle']}"/>
+    <af:deck id="d1" displayedChild="pgl7" binding="#{backingBeanScope.SummaryBalanceBean.d1}"
+             inlineStyle="background-color:white;width:649px;">
+        <af:transition transition="flipStart" triggerType="replace"/>
+        <af:transition transition="flipEnd" triggerType="replace"/>
+        <af:panelGroupLayout id="pgl6" binding="#{backingBeanScope.SummaryBalanceBean.pgl6}"
+                             inlineStyle="background-color:white;">
+            <af:panelGridLayout id="pgl1" inlineStyle="height:293px; width:649px; background-color:#F2F2F2;"
+                                binding="#{backingBeanScope.SummaryBalanceBean.pgl1}">
+                <af:gridRow marginTop="0px" height="auto" id="gr1" binding="#{backingBeanScope.SummaryBalanceBean.gr1}">
+                    <af:gridCell marginStart="0px" width="50%" id="gc1" inlineStyle="padding:5px"
+                                 binding="#{backingBeanScope.SummaryBalanceBean.gc1}" valign="bottom">
+                        <af:outputText value="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.ResumendeSaldo']}" id="ot1"
+                                       inlineStyle="font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';     font-weight: 700;     font-style: normal;     font-size: 32px;     color: #333333;     text-align: left;     line-height: normal;"
+                                       binding="#{backingBeanScope.SummaryBalanceBean.ot1}"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc2" halign="end"
+                                 inlineStyle="padding:5px" binding="#{backingBeanScope.SummaryBalanceBean.gc2}"
+                                 valign="bottom">
+                        <af:panelGroupLayout id="pgl2" layout="horizontal"
+                                             binding="#{backingBeanScope.SummaryBalanceBean.pgl2}">
+                            <af:link id="l1" icon="/images/u76.png" styleClass="tableicon"
+                                     binding="#{backingBeanScope.SummaryBalanceBean.l1}"
+                                     actionListener="#{backingBeanScope.SummaryBalanceBean.tableAction}"
+                                     partialSubmit="true"/>
+                            <af:spacer width="1" height="40" id="s1"
+                                       inlineStyle="margin-left:3px; margin-right:5px; background-color:#CCCCCC;"
+                                       binding="#{backingBeanScope.SummaryBalanceBean.s1}"/>
+                            <af:link id="l2" icon="/images/u78.png" disabled="true"
+                                     binding="#{backingBeanScope.SummaryBalanceBean.l2}" styleClass="pieicon"/>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr8" binding="#{backingBeanScope.SummaryBalanceBean.gr8}" height="1px">
+                    <af:gridCell id="gc12" binding="#{backingBeanScope.SummaryBalanceBean.gc12}" columnSpan="2">
+                        <af:spacer width="639" height="1" id="s5" binding="#{backingBeanScope.SummaryBalanceBean.s5}"
+                                   inlineStyle="background-color:#CCCCCC"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow marginTop="0px" id="gr2" binding="#{backingBeanScope.SummaryBalanceBean.gr2}">
+                    <af:gridCell marginStart="0px" columnSpan="2" marginEnd="0px" id="gc3"
+                                 binding="#{backingBeanScope.SummaryBalanceBean.gc3}">
+                        <af:panelGroupLayout id="pgl3"
+                                             styleClass="pgl_piechart"
+                                             binding="#{backingBeanScope.SummaryBalanceBean.pgl3}" valign="top">
+                            <af:panelGroupLayout id="pgl8" binding="#{backingBeanScope.SummaryBalanceBean.pgl8}"
+                                                 layout="horizontal" valign="top" inlineStyle="height:181px;"
+                                                 styleClass="AFStretchWidth" halign="left">
+                                <dvt:pieChart id="pieChart1" var="row" value="#{bindings.pieList.collectionModel}"
+                                              innerRadius="0.5" hideAndShowBehavior="withRescale" hoverBehavior="dim"
+                                              sorting="on" inlineStyle="width:280px; height:180px;"
+                                              binding="#{backingBeanScope.SummaryBalanceBean.pieChart1}">
+                                    <dvt:chartLegend id="cl1"/>
+                                    <dvt:pieDataItem id="di1" label="#{row.name} #{row.value}" value="#{row.value}"
+                                                     color="#{row.colorCode}" displayInLegend="off"
+                                                     binding="#{backingBeanScope.SummaryBalanceBean.di1}"/>
+                                </dvt:pieChart>
+                                <af:table value="#{bindings.pieList1.collectionModel}" var="row"
+                                          rows="#{bindings.pieList1.rangeSize}"
+                                          emptyText="#{bindings.pieList1.viewable ? 'No hay datos para mostrar.' : '
+Acceso denegado.'}"
+                                          rowBandingInterval="0" fetchSize="4" id="t2"
+                                          binding="#{backingBeanScope.SummaryBalanceBean.t2}"
+                                          styleClass="tableNoColumnHeaders  t2_pietable"
+                                          width="302" columnStretching="last" contentDelivery="immediate"
+                                          autoHeightRows="4">
+                                    <af:column headerText="#{bindings.pieList1.hints.colorCode.label}" id="c8"
+                                               styleClass="coloumnBorder" width="20">
+                                        <af:panelGroupLayout id="pgl9"
+                                                     inlineStyle="background-color:#{row.colorCode};height:16px;width:16px;border:1px solid #666666"
+                                                             layout="vertical"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.pieList1.hints.name.label}" id="c6"
+                                               styleClass="coloumnBorder" width="111">
+                                        <af:outputText value="#{row.name}"
+                                                       shortDesc="#{bindings.pieList1.hints.name.tooltip}" id="ot10"
+                                                       styleClass="pieColumntext"/>
+                                    </af:column>
+                                    <af:column headerText="#{bindings.pieList1.hints.value.label}" id="c7"
+                                               styleClass="coloumnBorder" width="119" inlineStyle="text-align:right">
+                                        <af:outputText value="#{row.value}"
+                                                       shortDesc="#{bindings.pieList1.hints.value.tooltip}" id="ot11"
+                                                       styleClass="pieCurrencyColtext">
+                                            <af:convertNumber groupingUsed="true"
+                                                              pattern="#{bindings.pieList1.hints.value.format}"
+                                                              type="currency" currencySymbol="$" locale="es_CL"/>
+                                        </af:outputText>
+                                    </af:column>
+                                </af:table>
+                            </af:panelGroupLayout>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr3"
+                            binding="#{backingBeanScope.SummaryBalanceBean.gr3}">
+                    <af:gridCell marginStart="0px" width="50%" id="gc4" inlineStyle="padding:5px"
+                                 binding="#{backingBeanScope.SummaryBalanceBean.gc4}">
+                        <af:outputText value="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.Informaci&#243;nactualizadaal']}" id="ot2"
+                                       inlineStyle="    font-family: 'Arial-ItalicMT', 'Arial Italic', 'Arial';     font-weight: 400;     font-style: italic;     font-size: 14px;     color: #666666;"
+                                       binding="#{backingBeanScope.SummaryBalanceBean.ot2}"/>
+                        <af:outputText value="#{currentDate}" id="ot13"
+                                       binding="#{backingBeanScope.SummaryBalanceBean.ot13}"
+                                       inlineStyle="    font-family: 'Arial-ItalicMT', 'Arial Italic', 'Arial';     font-weight: 400;     font-style: italic;     font-size: 14px;     color: #666666;;margin-left:10px">
+                            <af:convertDateTime type="date" pattern="dd/MM/YYYY" dateStyle="short" timeZone="CLT"/>
+                        </af:outputText>
+                    </af:gridCell>
+                    <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc5" inlineStyle="padding:10px"
+                                 halign="end" binding="#{backingBeanScope.SummaryBalanceBean.gc5}">
+                        <af:button text="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.Solicitarevaluaci&#243;n']}" id="b1"
+                                   inlineStyle="width:247px;height:45px;font-size:18px; color:#FFFFFF; font-family:'ArialMT', 'Arial'; font-weight:400; font-style:normal; text-align:center; line-height:normal; background-color:#666666; background-repeat:no-repeat;border-radius:10px"
+                                   styleClass="xf1" binding="#{backingBeanScope.SummaryBalanceBean.b1}"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:panelGroupLayout>
+        <af:panelGroupLayout id="pgl7" binding="#{backingBeanScope.SummaryBalanceBean.pgl7}"
+                             inlineStyle="background-color:white">
+            <af:panelGridLayout id="pgl4"
+                                inlineStyle="height:293px; width:643px; background-color:#F2F2F2;"
+                                binding="#{backingBeanScope.SummaryBalanceBean.pgl4}">
+                <af:gridRow marginTop="0px" height="auto" id="gr4" binding="#{backingBeanScope.SummaryBalanceBean.gr4}">
+                    <af:gridCell marginStart="0px" width="50%" id="gc6"
+                                 binding="#{backingBeanScope.SummaryBalanceBean.gc6}" halign="start" valign="bottom">
+                        <af:outputText value="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.ResumendeSaldo']}" id="ot3"
+                                       inlineStyle="font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';     font-weight: 700;     font-style: normal;     font-size: 32px;     color: #333333;     text-align: left;     line-height: normal;"
+                                       binding="#{backingBeanScope.SummaryBalanceBean.ot3}"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc7" halign="end"
+                                 inlineStyle="padding:5px" binding="#{backingBeanScope.SummaryBalanceBean.gc7}">
+                        <af:panelGroupLayout id="pgl5" layout="horizontal"
+                                             binding="#{backingBeanScope.SummaryBalanceBean.pgl5}">
+                            <af:link id="l3" icon="/images/u76.png" styleClass="tableicon" disabled="true"
+                                     binding="#{backingBeanScope.SummaryBalanceBean.l3}"/>
+                            <af:spacer width="1" height="30" id="s2"
+                                       inlineStyle="margin-left:2px;margin-right:5px;background-color:#CCCCCC"
+                                       binding="#{backingBeanScope.SummaryBalanceBean.s2}"/>
+                            <af:link id="l4" icon="/images/u78.png" disabled="false"
+                                     binding="#{backingBeanScope.SummaryBalanceBean.l4}"
+                                     actionListener="#{backingBeanScope.SummaryBalanceBean.chartAction}"
+                                     partialSubmit="true" styleClass="pieicon"/>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow id="gr7" binding="#{backingBeanScope.SummaryBalanceBean.gr7}">
+                    <af:gridCell id="gc11" binding="#{backingBeanScope.SummaryBalanceBean.gc11}" columnSpan="2"
+                                 valign="stretch" inlineStyle="border-color:black">
+                        <af:spacer height="1" id="s4" binding="#{backingBeanScope.SummaryBalanceBean.s4}" width="639"
+                                   inlineStyle="background-color:#CCCCCC"/>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow marginTop="10px" height="auto" id="gr5" binding="#{backingBeanScope.SummaryBalanceBean.gr5}">
+                    <af:gridCell marginStart="0px" columnSpan="2" marginEnd="0px" id="gc8"
+                                 inlineStyle="border-top:1px solid #666666;margin:5px;padding-top:10px" halign="stretch"
+                                 binding="#{backingBeanScope.SummaryBalanceBean.gc8}">
+                        <af:panelGroupLayout id="pgl10" binding="#{backingBeanScope.SummaryBalanceBean.pgl10}">
+                            <af:table value="#{bindings.list.collectionModel}" var="row"
+                                      rows="#{bindings.list.rangeSize}"
+                                      emptyText="#{bindings.list.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      fetchSize="#{bindings.list.rangeSize}" id="t1" columnStretching="last"
+                                      autoHeightRows="2" binding="#{backingBeanScope.SummaryBalanceBean.t1}"
+                                      rowBandingInterval="0" styleClass="t1_summarybalance">
+                                <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.TipoDeCredito']}" id="c1" width="116"
+                                           footerClass="t1_sumTableFooterFirst" styleClass="t1_column"
+                                           inlineStyle="border-color:black;height:25px;" headerClass="t1_sumTableHeader">
+                                    <af:outputText value="#{row['tipoDeCr&#233;dito']}"
+                                                   shortDesc="#{bindings.list.hints['tipoDeCr&#233;dito'].tooltip}"
+                                                   styleClass="tabledataclass" id="ot5"/>
+                                    <f:facet name="footer">
+                                        <af:outputLabel id="ol1"
+                                                        binding="#{backingBeanScope.SummaryBalanceBean.ol1}"
+                                                        value="#{bindings.totalTipoDeCr&#233;dito.inputValue}">
+                                            <af:convertNumber type="currency" currencySymbol="$" maxIntegerDigits="0"
+                                                              minIntegerDigits="3"/>
+                                        </af:outputLabel>
+                                    </f:facet>
+                                </af:column>
+                                <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.Cupo']}" id="c2" width="116" footerClass="t1_sumTableFooter"
+                                           headerClass="t1_sumTableHeader" inlineStyle="border-color:black;height:25px;"
+                                           styleClass="t1_column ">
+                                    <af:outputText value="#{row.cupo}" shortDesc="#{bindings.list.hints.cupo.tooltip}"
+                                                   id="ot6" styleClass="tabledataclass">
+                                        <af:convertNumber
+                                                          pattern="#{bindings.list.hints.cupo.format}" type="currency"
+                                                          currencySymbol="$"
+                                                          locale="es_CL"/>
+                                    </af:outputText>
+                                    <f:facet name="footer">
+                                        <af:outputLabel value="#{bindings.totalCupo.inputValue}" id="ol2"
+                                                        binding="#{backingBeanScope.SummaryBalanceBean.ol2}">
+                                            <af:convertNumber type="currency" currencySymbol="$" locale="es_CL"/>
+                                        </af:outputLabel>
+                                    </f:facet>
+                                </af:column>
+                                <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.Utilizado']}" id="c3" width="115" footerClass="t1_sumTableFooter"
+                                           headerClass="t1_sumTableHeader" styleClass="t1_column"
+                                           inlineStyle="border-color:black;height:25px;">
+                                    <af:outputText value="#{row.utilizado}" styleClass="tabledataclass"
+                                                   shortDesc="#{bindings.list.hints.utilizado.tooltip}" id="ot7">
+                                        <af:convertNumber groupingUsed="true"
+                                                          pattern="#{bindings.list.hints.utilizado.format}"
+                                                          currencySymbol="$" type="currency" locale="es_CL"/>
+                                    </af:outputText>
+                                    <f:facet name="footer">
+                                        <af:outputLabel value="#{bindings.totalUtilizado.inputValue}" id="ol3"
+                                                        binding="#{backingBeanScope.SummaryBalanceBean.ol3}">
+                                            <af:convertNumber type="currency" currencySymbol="$" locale="es_CL"/>
+                                        </af:outputLabel>
+                                    </f:facet>
+                                </af:column>
+                                <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.PorFacturar']}" id="c4" width="118" headerClass="t1_sumTableHeader"
+                                           styleClass="t1_column" inlineStyle="border-color:black;height:25px;"
+                                           footerClass="t1_sumTableFooter">
+                                    <af:outputText value="#{row.porFacturar}" styleClass="tabledataclass"
+                                                   shortDesc="#{bindings.list.hints.porFacturar.tooltip}" id="ot8">
+                                        <af:convertNumber groupingUsed="true"
+                                                          pattern="#{bindings.list.hints.porFacturar.format}"
+                                                          type="currency" currencySymbol="$" locale="es_CL"/>
+                                    </af:outputText>
+                                    <f:facet name="footer">
+                                        <af:outputLabel value="#{bindings.totalPorFacturar.inputValue}" id="ol4"
+                                                        binding="#{backingBeanScope.SummaryBalanceBean.ol4}">
+                                            <af:convertNumber type="currency" currencySymbol="$" locale="es_CL"/>
+                                        </af:outputLabel>
+                                    </f:facet>
+                                </af:column>
+                                <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.Disponible']}" id="c5" width="115"
+                                           headerClass="t1_sumTableHeaderLast" styleClass="t1_column"
+                                           inlineStyle="border-bottom-color:black;height:25px;" footerClass="t1_sumTableFooterLast">
+                                    <af:outputText value="#{row.disponible}" styleClass="tabledataclass"
+                                                   shortDesc="#{bindings.list.hints.disponible.tooltip}" id="ot9">
+                                        <af:convertNumber groupingUsed="true"
+                                                          pattern="#{bindings.list.hints.disponible.format}"
+                                                          type="currency" currencySymbol="$" locale="es_CL"/>
+                                    </af:outputText>
+                                    <f:facet name="footer">
+                                        <af:outputLabel value="#{bindings.totalDisponible.inputValue}" id="ol5"
+                                                        binding="#{backingBeanScope.SummaryBalanceBean.ol5}">
+                                            <af:convertNumber type="currency" currencySymbol="$" locale="es_CL"/>
+                                        </af:outputLabel>
+                                    </f:facet>
+                                </af:column>
+                            </af:table>
+                        </af:panelGroupLayout>
+                    </af:gridCell>
+                </af:gridRow>
+                <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr6"
+                            binding="#{backingBeanScope.SummaryBalanceBean.gr6}">
+                    <af:gridCell marginStart="0px" width="50%" id="gc9" inlineStyle="padding:5px"
+                                 binding="#{backingBeanScope.SummaryBalanceBean.gc9}">
+                        <af:outputText value="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.Informaci&#243;nactualizadaal']}" id="ot4"
+                                       inlineStyle="    font-family: 'Arial-ItalicMT', 'Arial Italic', 'Arial';     font-weight: 400;     font-style: italic;     font-size: 14px;     color: #666666;"
+                                       binding="#{backingBeanScope.SummaryBalanceBean.ot4}"/>
+                        <af:outputText value="#{currentDate}" id="ot12"
+                                       inlineStyle="    font-family: 'Arial-ItalicMT', 'Arial Italic', 'Arial';     font-weight: 400;     font-style: italic;     font-size: 14px;     color: #666666;;margin-left:10px"
+                                       binding="#{backingBeanScope.SummaryBalanceBean.ot12}">
+                            <af:convertDateTime type="date" timeZone="CLT" dateStyle="short" pattern="dd/MM/YYYY"/>
+                        </af:outputText>
+                    </af:gridCell>
+                    <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc10" inlineStyle="padding:10px"
+                                 halign="end" binding="#{backingBeanScope.SummaryBalanceBean.gc10}">
+                        <af:button text="#{viewcontrollerBundle['com.felabella.sodimac.view.summarybalance.Solicitarevaluaci&#243;n']}" id="b2"
+                                   inlineStyle="width:247px;height:45px;font-size:18px; color:#FFFFFF; font-family:'ArialMT', 'Arial'; font-weight:400; font-style:normal; text-align:center; line-height:normal; background-color:#666666; background-repeat:no-repeat;border-radius:10px"
+                                   styleClass="xf1" binding="#{backingBeanScope.SummaryBalanceBean.b2}"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </af:panelGroupLayout>
+    </af:deck>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:SummaryBalanceBean-->
+</jsp:root>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.20.47" id="TestPageDef"
+                Package="com.falabella.sodimac.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="summary_balance_TF1" taskFlowId="/WEB-INF/summary_balance_TF.xml#summary_balance_TF"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="document_details_TF1" taskFlowId="/WEB-INF/document_details_TF.xml#document_details_TF"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="account_status_TF1" taskFlowId="/WEB-INF/account_status_TF.xml#account_status_TF"
+              activation="deferred" xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+    <taskFlow id="logintaskflow1" taskFlowId="/WEB-INF/sodimac-login_TF.xml#login-task-flow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding"/>
+  </executables>
+  <bindings/>
+</pageDefinition>

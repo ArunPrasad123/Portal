@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:ns0="http://mdwcorp.falabella.com/common/schema/clientservice" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mdwcorp.falabella.com/common/schema/clientservice" elementFormDefault="qualified">
+  <xsd:complexType name="ClientService_TYPE">
+    <xsd:sequence>
+      <xsd:element name="country" type="ns0:Country_TYPE"/>
+      <xsd:element name="commerce" type="ns0:Commerce_TYPE"/>
+      <xsd:element name="channel" type="ns0:Channel_TYPE"/>
+      <xsd:element name="storeId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="terminalId" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="date" type="xsd:date" minOccurs="0"/>
+      <xsd:element name="hour" type="xsd:time" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="ClientService" type="ns0:ClientService_TYPE"/>
+  <xsd:simpleType name="Country_TYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AR"/>
+      <xsd:enumeration value="BR"/>
+      <xsd:enumeration value="CL"/>
+      <xsd:enumeration value="CO"/>
+      <xsd:enumeration value="PE"/>
+      <xsd:enumeration value="UY"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Commerce_TYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Banco"/>
+      <xsd:enumeration value="CMR"/>
+      <xsd:enumeration value="Falabella"/>
+      <xsd:enumeration value="Seguros"/>
+      <xsd:enumeration value="Sodimac"/>
+      <xsd:enumeration value="Tottus"/>
+      <xsd:enumeration value="Movil"/>
+      <xsd:enumeration value="Viajes"/>
+      <xsd:enumeration value="Falabella Movil"/>
+      <xsd:enumeration value="CrateAndBarrel"/>
+      <xsd:enumeration value="Telco CMR"/>
+      <xsd:enumeration value="Connect"/>
+      <xsd:enumeration value="Web Movil Falabella"/>
+      <xsd:enumeration value="BackOffice"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Channel_TYPE">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ASL+"/>
+      <xsd:enumeration value="B2B"/>
+      <xsd:enumeration value="B2C"/>
+      <xsd:enumeration value="Cardif"/>
+      <xsd:enumeration value="Comercio Adherido"/>
+      <xsd:enumeration value="CRM"/>
+      <xsd:enumeration value="Fono Compras"/>
+      <xsd:enumeration value="Homy"/>
+      <xsd:enumeration value="IVR"/>
+      <xsd:enumeration value="Kiosco"/>
+      <xsd:enumeration value="Mobile"/>
+      <xsd:enumeration value="Mobile-APP"/>
+      <xsd:enumeration value="Mobile-WEB"/>
+      <xsd:enumeration value="Portal"/>
+      <xsd:enumeration value="Presencial"/>
+      <xsd:enumeration value="POS"/>
+      <xsd:enumeration value="Punto de Venta"/>
+      <xsd:enumeration value="SIX"/>
+      <xsd:enumeration value="UXPOS"/>
+      <xsd:enumeration value="Venta-Empresa"/>
+      <xsd:enumeration value="Web"/>
+      <xsd:enumeration value="Web CMR"/>
+      <xsd:enumeration value="Web-PAC"/>
+      <xsd:enumeration value="USSD"/>
+      <xsd:enumeration value="DIM"/>
+      <xsd:enumeration value="PMM"/>
+      <xsd:enumeration value="WMOS"/>
+      <xsd:enumeration value="SRX"/>
+      <xsd:enumeration value="ATG"/>
+      <xsd:enumeration value="OMS"/>
+      <xsd:enumeration value="TRL"/>
+      <xsd:enumeration value="SAB"/>
+      <xsd:enumeration value="WEB_PORTAL"/>
+      <xsd:enumeration value="BATCH"/>
+      <xsd:enumeration value="App-GSVendedor"/>
+      <xsd:enumeration value="QuickPay"/>
+      <xsd:enumeration value="DAD"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,183 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebService xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webservice">
+   <list n="CHILD_NODES">
+      <url path="../../../../../../../../../../org/xmlsoap/schemas/soap/envelope/package-info.java"/>
+      <url path="../../../../../../../common/schema/clientservice/CommerceTYPE.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/resp_v2016/ObjectFactory.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/resp_v2016/package-info.java"/>
+      <url path="../../../../../../../../../../org/xmlsoap/schemas/soap/envelope/ObjectFactory.java"/>
+      <url path="../../../../../../../common/schema/clientservice/ObjectFactory.java"/>
+      <url path="../../../../../../../common/schema/clientservice/ChannelTYPE.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/req_v2016/package-info.java"/>
+      <url path="../../../../../../../../../../org/xmlsoap/schemas/soap/envelope/Fault.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/resp_v2016/RespuestaConsultaTYPE.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/resp_v2016/DetalleListaTYPE.java"/>
+      <url path="FaultMsg.java"/>
+      <url path="../../../../../../../common/schema/clientservice/CountryTYPE.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/resp_v2016/ClienteEmpresaDocumentosObtenerExpRespTYPE.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/req_v2016/ObjectFactory.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/req_v2016/ClienteEmpresaDocumentosObtenerExpReqTYPE.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/resp_v2016/ListaResultadosTYPE.java"/>
+      <url path="../../../../../../../common/schema/clientservice/ClientServiceTYPE.java"/>
+      <url path="../../../../../../../common/schema/clientservice/package-info.java"/>
+      <url path="../../../../schema/clienteempresa/documentos/obtener/req_v2016/UbicacionConsultarTYPE.java"/>
+      <url path="ClienteEntregaDocumentosObtenerPtImpl.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MIME"/>
+      <list n="BD_">
+         <hash>
+            <value n="BD_DEFAULT_DOCUMENT_WRAPPED" v="false"/>
+            <value n="BOUND_PORT_TYPE" v="{http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Clienteempresa/Documentos/Obtener-v1.0}ClienteEntregaDocumentosObtenerPt"/>
+            <value n="DEFAULT_NAME" v="false"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+            <value n="NAME" v="{http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Clienteempresa/Documentos/Obtener-v1.0}ClienteEmpresaDocumentosObtenerBinding"/>
+            <list n="OP_BINDINGS">
+               <hash>
+                  <value n="BD_RESPONSE_PART" v="ClienteEmpresaDocumentosObtenerRespParam"/>
+                  <value n="BD_SOAP_ACTION" v="http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Clienteempresa/Documentos/Obtener-v1.0/Op"/>
+                  <value n="BD_WSDL_RETURN_NAME" v="clienteEmpresaDocumentosObtenerExpResp"/>
+                  <value n="BD_WSDL_RETURN_TNS" v="http://mdwcorp.falabella.com/SOD/CL/OSB/schema/Clienteempresa/Documentos/Obtener/Resp-v2016.07"/>
+                  <value n="BOUND_OPERATION" v="com.falabella.mdwcorp.sod.cl.osb.schema.clienteempresa.documentos.obtener.resp_v2016.ClienteEmpresaDocumentosObtenerExpRespTYPE.ClienteEmpresaDocumentosObtenerOp.com.falabella.mdwcorp.sod.cl.osb.schema.clienteempresa.documentos.obtener.req_v2016.ClienteEmpresaDocumentosObtenerExpReqTYPE"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </list>
+            <hash n="PROPERTY_GROUPS"/>
+         </hash>
+      </list>
+      <list n="BINDING_FILES"/>
+      <list n="GENERATED_FILES">
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\org\xmlsoap\schemas\soap\envelope\package-info.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\common\schema\clientservice\CommerceTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\resp_v2016\ObjectFactory.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\resp_v2016\package-info.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\org\xmlsoap\schemas\soap\envelope\ObjectFactory.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\common\schema\clientservice\ObjectFactory.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\common\schema\clientservice\ChannelTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\req_v2016\package-info.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\org\xmlsoap\schemas\soap\envelope\Fault.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\resp_v2016\RespuestaConsultaTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\resp_v2016\DetalleListaTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\wsdl\clienteempresa\documentos\obtener_v1\FaultMsg.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\common\schema\clientservice\CountryTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\resp_v2016\ClienteEmpresaDocumentosObtenerExpRespTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\req_v2016\ObjectFactory.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\wsdl\clienteempresa\documentos\obtener_v1\ClienteEntregaDocumentosObtenerPt.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\req_v2016\ClienteEmpresaDocumentosObtenerExpReqTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\resp_v2016\ListaResultadosTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\common\schema\clientservice\ClientServiceTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\common\schema\clientservice\package-info.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+         <hash>
+            <value n="GENERATED_FILE_NAME" v="C:\JDeveloper\mywork\SodimacService\ClienteEmpresaDocumentosObtener\src\com\falabella\mdwcorp\sod\cl\osb\schema\clienteempresa\documentos\obtener\req_v2016\UbicacionConsultarTYPE.java"/>
+            <value n="GENERATED_FILE_TYPE" v="ValueType"/>
+         </hash>
+      </list>
+      <value n="GENERATION_OPTION" v="ANNOTATIONS"/>
+      <value n="GUID" v="fbc4a2d3-0155-1000-8001-ac1201f10f23"/>
+      <value n="LAST_GENERATION_BOTTOM_UP" v="false"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaWebService"/>
+      <list n="PO_">
+         <hash>
+            <value n="DEFAULT_NAME" v="false"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+            <value n="NAME" v="ClienteEmpresaDocumentosObtenerPort"/>
+            <value n="PORT_BINDING_NAME" v="{http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Clienteempresa/Documentos/Obtener-v1.0}ClienteEmpresaDocumentosObtenerBinding"/>
+            <list n="PORT_OPS">
+               <hash>
+                  <value n="EXPOSED_BD_OPERATION" v="com.falabella.mdwcorp.sod.cl.osb.schema.clienteempresa.documentos.obtener.resp_v2016.ClienteEmpresaDocumentosObtenerExpRespTYPE.clienteEmpresaDocumentosObtenerOp.com.falabella.mdwcorp.sod.cl.osb.schema.clienteempresa.documentos.obtener.req_v2016.ClienteEmpresaDocumentosObtenerExpReqTYPE"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </list>
+            <hash n="PROPERTY_GROUPS"/>
+            <url n="URL" protocol="http" host="localhost" path=""/>
+         </hash>
+      </list>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <list n="PT_">
+         <hash>
+            <value n="AUTO_SERVICE_INTERFACE"/>
+            <value n="DEFAULT_NAME" v="false"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+            <value n="NAME" v="{http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Clienteempresa/Documentos/Obtener-v1.0}ClienteEntregaDocumentosObtenerPt"/>
+            <hash n="PROPERTY_GROUPS"/>
+            <value n="PT_CLASS" v="com.falabella.mdwcorp.sod.cl.osb.wsdl.clienteempresa.documentos.obtener_v1.ClienteEntregaDocumentosObtenerPtImpl"/>
+            <value n="PT_TOP_DOWN_GENERATED_SEI_NAME" v="com.falabella.mdwcorp.sod.cl.osb.wsdl.clienteempresa.documentos.obtener_v1.ClienteEntregaDocumentosObtenerPt"/>
+         </hash>
+      </list>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <url n="TARGET_PROJECT" path="../../../../../../../../../../../ClienteEmpresaDocumentosObtener.jpr"/>
+      <value n="TOPDOWN_GENERATION_OPTION" v="JAVA"/>
+      <list n="WS_DEPENDENT_VALUE_TYPES"/>
+      <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+      <value n="WS_REFERENCE_WSDL"/>
+      <value n="WS_TARGET_NAMESPACE" v="http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Clienteempresa/Documentos/Obtener-v1.0"/>
+      <value n="WS_URI" v="ClienteEmpresaDocumentosObtenerService"/>
+      <url n="WS_WSDL_FILE" path="../../../../../../../../../../../../../../../Users/NUITB2/Desktop/Webservice/OSB_ClienteEmpresa_Documentos_ObtenerV2/ClienteEmpresaDocumentosObtener/SOD_CL_OSB_Clienteempresa_Documentos_Obtener.wsdl"/>
+   </hash>
+</jdevws:WebService>

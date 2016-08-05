@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+  <c:set var="viewcontrollerBundle" value="#{adfBundle['com.falabella.sodimac.view.ViewControllerBundle']}"/>
+  <af:deck id="d1" displayedChild="pgl1" inlineStyle="background-color:white;"
+           binding="#{backingBeanScope.DocumentDetailsBean.d1}">
+    <af:panelGroupLayout id="pgl1" layout="vertical" inlineStyle="padding-top:10px;width:900px"
+                         binding="#{backingBeanScope.DocumentDetailsBean.pgl1}">
+      <af:panelGroupLayout id="pgl4" layout="vertical" binding="#{backingBeanScope.DocumentDetailsBean.pgl4}">
+        <af:navigationPane hint="bar" id="np1" inlineStyle="width:900px"
+                           binding="#{backingBeanScope.DocumentDetailsBean.np1}">
+          <af:commandNavigationItem id="ni1"
+                                    text="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.FacturasPendientesdePago']}" selected="true"
+                                    inlineStyle="color:#666666; width:360px; text-align:center; padding-bottom:5px;"
+                                    binding="#{backingBeanScope.DocumentDetailsBean.ni1}"/>
+          <af:commandNavigationItem text="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.HistorialdePagos']}" id="cni1"
+                                    inlineStyle="color:#666666; width:519px; margin-left:-23px; padding-left:25px; padding-bottom:5px;"
+                                    binding="#{backingBeanScope.DocumentDetailsBean.cni1}"/>
+        </af:navigationPane>
+      </af:panelGroupLayout>
+      <af:panelGroupLayout id="pgl3" layout="vertical" inlineStyle="margin-top:15px;margin-bottom:15px"
+                           binding="#{backingBeanScope.DocumentDetailsBean.pgl3}">
+        <af:panelGridLayout id="pgl5" inlineStyle="width:900px" binding="#{backingBeanScope.DocumentDetailsBean.pgl5}">
+          <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr1"
+                      binding="#{backingBeanScope.DocumentDetailsBean.gr1}">
+            <af:gridCell marginStart="0px" width="50%" id="gc1" binding="#{backingBeanScope.DocumentDetailsBean.gc1}"/>
+            <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc2" halign="end"
+                         binding="#{backingBeanScope.DocumentDetailsBean.gc2}">
+                <af:link text="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.VerTodas']}" id="l2"
+                 inlineStyle="font-size: 15px; text-decoration: underline; font-family: 'ArialMT', 'Arial'; font-weight: 400; font-style: normal; color: #333333; line-height: normal;"
+                         binding="#{backingBeanScope.DocumentDetailsBean.l2}"
+                         actionListener="#{backingBeanScope.DocumentDetailsBean.verTodasAction}"/>
+            </af:gridCell>
+          </af:gridRow>
+        </af:panelGridLayout>
+      </af:panelGroupLayout>
+      <af:panelGroupLayout id="pgl2" inlineStyle="margin-top:10px" layout="vertical"
+                           binding="#{backingBeanScope.DocumentDetailsBean.pgl2}">
+        <af:table value="#{bindings.documents1.collectionModel}" var="row" rows="#{bindings.documents1.rangeSize}"
+                  emptyText="#{bindings.documents1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  rowBandingInterval="0" id="t1" styleClass="tableBorderclass"
+                  inlineStyle="width:900px;" columnStretching="last" autoHeightRows="13"
+                  fetchSize="10" binding="#{backingBeanScope.DocumentDetailsBean.t1}">
+          <af:column sortProperty="#{bindings.documents1.hints.numeroDocumento.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.N&#186;Documento']}" id="c8"
+                     headerClass="t1_sumTableHeaderlLeft"
+                     styleClass="sumColContent"
+                     width="132" inlineStyle="border-color:black;">
+            <af:outputText value="#{row.numeroDocumento}"
+                           shortDesc="#{bindings.documents1.hints.numeroDocumento.tooltip}" id="ot7"/>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.nombreUnidad.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.Nombretienda']}" id="c9" styleClass="sumColContent"
+                     headerClass="t1_sumTableHeaderlLeft"
+                     width="133" inlineStyle="border-color:black;">
+            <af:outputText value="#{row.nombreUnidad}" shortDesc="#{bindings.documents1.hints.nombreUnidad.tooltip}"
+                           id="ot8"/>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.saldo.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.Saldo']}" id="c10"
+                     styleClass="sumColContent" headerClass="t1_sumTableHeaderlLeft" width="84"
+                     inlineStyle="border-color:black;">
+            <af:outputText value="#{row.saldo}" shortDesc="#{bindings.documents1.hints.saldo.tooltip}" id="ot9">
+              <af:convertNumber groupingUsed="true" pattern="#{bindings.documents1.hints.saldo.format}"
+                                type="currency" currencySymbol="$" locale="es_CL"/>
+            </af:outputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.documentoFechaEmision.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.FechaEmisi&#243;n']}" id="c11" styleClass="sumColContent"
+                     headerClass="t1_sumTableHeaderlLeft"
+                     width="139" inlineStyle="border-color:black;">
+            <af:outputText value="#{row.documentoFechaEmision}"
+                           shortDesc="#{bindings.documents1.hints.documentoFechaEmision.tooltip}" id="ot10">
+              <af:convertDateTime pattern="#{bindings.documents1.hints.documentoFechaEmision.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.documentoFechaVencimiento.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.FechaVencimiento']}" id="c12" styleClass="sumColContent"
+                     headerClass="t1_sumTableHeaderlLeft"
+                     width="165" inlineStyle="border-color:black;">
+            <af:outputText value="#{row.documentoFechaVencimiento}"
+                           shortDesc="#{bindings.documents1.hints.documentoFechaVencimiento.tooltip}" id="ot11">
+              <af:convertDateTime pattern="#{bindings.documents1.hints.documentoFechaVencimiento.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.diasVencido.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.D&#237;asvencido']}" id="c13" styleClass="sumColContentLast"
+                     headerClass="t1_sumTableHeaderLast"
+                     width="43" inlineStyle="border-bottom-color:black;">
+            <af:outputText value="#{row.diasVencido}" shortDesc="#{bindings.documents1.hints.diasVencido.tooltip}"
+                           id="ot12"/>
+          </af:column>
+          <!--<af:column id="c14" width="24" styleClass="sumColContent" headerClass="sumTableHeader" helpTopicId="/images/"
+                     rendered="false">
+            <af:panelGroupLayout id="pgl3" layout="horizontal">
+              <af:link id="l1" icon="/images/u413.png" text="PDF" iconPosition="top" inlineStyle="color:Black;"
+                       styleClass="AFMyCommandImageSize"/>
+              <af:spacer width="10" height="10" id="s2"/>
+              <af:link id="l4" icon="/images/u413.png" text="PDF DTE" iconPosition="top" inlineStyle="color:Black;"
+                       styleClass="AFMyCommandImageSize"/>
+            </af:panelGroupLayout>
+          </af:column>-->
+        </af:table>
+        <af:panelGroupLayout id="pgl6" layout="vertical" halign="right" inlineStyle="width:900px; padding-top:15px"
+                             binding="#{backingBeanScope.DocumentDetailsBean.pgl6}">
+          <af:panelGridLayout id="pgl7" binding="#{backingBeanScope.DocumentDetailsBean.pgl7}">
+            <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr2"
+                        binding="#{backingBeanScope.DocumentDetailsBean.gr2}">
+              <af:gridCell marginStart="0px" width="50%" id="gc3" binding="#{backingBeanScope.DocumentDetailsBean.gc3}"/>
+              <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc4" halign="end"
+                           binding="#{backingBeanScope.DocumentDetailsBean.gc4}">
+                <af:button text="#{viewcontrollerBundle['com.felabella.sodimac.view.documentdetails.Seleccionarfacturasparapago']}" id="b1"
+                           inlineStyle="width:296px;height:45px;font-size:18px; color:#FFFFFF; font-family:'ArialMT', 'Arial'; font-weight:400; font-style:normal; text-align:center; line-height:normal; background-color:#666666; background-repeat:no-repeat;border-radius:10px;background-image:none;text-shadow:none"
+                           binding="#{backingBeanScope.DocumentDetailsBean.b1}"/>
+              </af:gridCell>
+            </af:gridRow>
+          </af:panelGridLayout>
+        </af:panelGroupLayout>
+      </af:panelGroupLayout>
+    </af:panelGroupLayout>
+  </af:deck>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:DocumentDetailsBean-->
+</jsp:root>

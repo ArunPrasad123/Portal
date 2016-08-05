@@ -1,0 +1,20 @@
+<References xmlns="http://xmlns.oracle.com/adf/jndi">
+  <Reference name="Standalone" className="oracle.webcenter.assetpublishing.connection.rc.model.PortalServerConnection"
+             credentialStoreKey="Standalone" xmlns="">
+    <Factory className="oracle.webcenter.assetpublishing.connection.rc.model.PortalServerConnectionFactory"/>
+    <RefAddresses>
+      <XmlRefAddr addrType="Standalone">
+        <Contents>
+          <portalserverconnection name="Standalone" url="http://localhost:8888/rest/api/v1/resourceIndex">
+            <authentication style="challange">
+              <type>basic</type>
+              <realm>REST</realm>
+            </authentication>
+          </portalserverconnection>
+        </Contents>
+      </XmlRefAddr>
+      <SecureRefAddr addrType="password"/>
+      <SecureRefAddr addrType="username"/>
+    </RefAddresses>
+  </Reference>
+</References>
