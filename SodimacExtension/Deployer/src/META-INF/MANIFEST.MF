@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Created-By: NUIT-DEV
-Implementation-Title: sodimac.generic.taskflows
-Extension-Name: extend.portal.sodimac.generic.taskflows
-Specification-Version: 1.0.1
-Implementation-Version: 1.0.1
-Implementation-Vendor: Oracle

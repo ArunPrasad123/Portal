@@ -1,4 +1,0 @@
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-  <system systemId="http://127.0.0.1:8888/SodimacService-CuentaCorrienteSaldoObtener-context-root/CuentaCorrienteSaldoObtenerPort?WSDL#%7Bhttp%3A%2F%2Fmdwcorp.falabella.com%2FSOD%2FCL%2FOSB%2Fwsdl%2FCuentacorriente%2FSaldo%2FObtener-v1.0%7DCuentaCorrienteSaldoObtenerService"
-          uri="../com/falabella/mdwcorp/sod/cl/osb/wsdl/cuentacorriente/saldo/obtener_v1/CuentaCorrienteSaldoObtenerService.wsdl"/>
-</catalog>

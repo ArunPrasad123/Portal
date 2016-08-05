@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ns0:pageTemplate xmlns:ns0="http://xmlns.oracle.com/webcenter/assetpublishing/assetdef">
-   <name>Sodimac_Main_Template</name>
-   <displayName>Sodimac_Main_Template</displayName>
-   <sourcePath>/sodimac_Main_Template</sourcePath>
-   <pagePath>Sodimac_Main_Template.jspx</pagePath>
-   <pageDefinitionPath>Sodimac_Main_TemplatePageDef.xml</pageDefinitionPath>
-</ns0:pageTemplate>
