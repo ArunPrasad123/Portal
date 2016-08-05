@@ -194,8 +194,8 @@
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="SodimacExtension-PortalSharedLibrary-webapp"/>
-      <value n="j2eeWebContextRoot" v="SodimacExtension-PortalSharedLibrary-context-root"/>
+      <value n="j2eeWebAppName" v="SodimacExtension-PortalSharedLibrary"/>
+      <value n="j2eeWebContextRoot" v="SodimacExtension-PortalSharedLibrary"/>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
       <url n="outputDirectory" path="classes/"/>
