@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:ns0="http://mdwcorp.falabella.com/SOD/CL/OSB/schema/Cuentacorriente/Saldo/Obtener/Resp-v2016.07" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mdwcorp.falabella.com/SOD/CL/OSB/schema/Cuentacorriente/Saldo/Obtener/Resp-v2016.07">
+  <xsd:complexType name="cuentaCorrienteSaldoObtenerExpResp_TYPE">
+    <xsd:sequence>
+      <xsd:element name="respMensaje" type="ns0:respMensaje_TYPE"/>
+      <xsd:element name="lineaCreditoHeader" type="ns0:lineaCreditoHeader_TYPE" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="respMensaje_TYPE">
+    <xsd:sequence>
+      <xsd:element name="codigoMensaje" type="xsd:int"/>
+      <xsd:element name="descripcionMensaje" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="lineaCreditoHeader_TYPE">
+    <xsd:sequence>
+      <xsd:element name="creditoAutorizado" type="xsd:decimal"/>
+      <xsd:element name="creditoOtorgado" type="xsd:decimal"/>
+      <xsd:element name="porFacturar" type="xsd:decimal"/>
+      <xsd:element name="disponible" type="xsd:decimal"/>
+      <xsd:element name="montoLineaCreditoDocumentoSuc" type="xsd:decimal"/>
+      <xsd:element name="montoDeudaDocumentoSuc" type="xsd:decimal"/>
+      <xsd:element name="montoComprometidoSuc" type="xsd:decimal"/>
+      <xsd:element name="disponibleDocumentado" type="xsd:decimal"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="cuentaCorrienteSaldoObtenerExpResp" type="ns0:cuentaCorrienteSaldoObtenerExpResp_TYPE"/>
+</xsd:schema>

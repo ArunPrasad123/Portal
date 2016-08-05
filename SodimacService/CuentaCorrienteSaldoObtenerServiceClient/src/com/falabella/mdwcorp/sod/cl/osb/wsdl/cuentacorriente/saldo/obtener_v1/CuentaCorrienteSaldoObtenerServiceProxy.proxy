@@ -1,0 +1,151 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="CuentaCorrienteSaldoObtenerService.xml"/>
+      <url path="CuentaCorrienteSaldoObtenerService.wsdl"/>
+      <url path="CuentaCorrienteSaldoObtenerPort4.xsd"/>
+      <url path="CuentaCorrienteSaldoObtenerPort3.xsd"/>
+      <url path="CuentaCorrienteSaldoObtenerPort2.xsd"/>
+      <url path="CuentaCorrienteSaldoObtenerPort1.xsd"/>
+      <url path="../../../../../../../common/schema/clientservice/CountryTYPE.java"/>
+      <url path="../../../../../../../common/schema/clientservice/ObjectFactory.java"/>
+      <url path="../../../../schema/cuentacorriente/saldo/obtener/req_v2016/CuentaCorrienteSaldoObtenerExpReqTYPE.java"/>
+      <url path="../../../../../../../../../../org/xmlsoap/schemas/soap/envelope/package-info.java"/>
+      <url path="FaultMsg.java"/>
+      <url path="../../../../schema/cuentacorriente/saldo/obtener/resp_v2016/package-info.java"/>
+      <url path="../../../../schema/cuentacorriente/saldo/obtener/resp_v2016/CuentaCorrienteSaldoObtenerExpRespTYPE.java"/>
+      <url path="../../../../../../../common/schema/clientservice/ClientServiceTYPE.java"/>
+      <url path="../../../../../../../common/schema/clientservice/ChannelTYPE.java"/>
+      <url path="CuentaCorrienteSaldoObtenerPortClient.java"/>
+      <url path="CuentaCorrienteSaldoObtenerService.java"/>
+      <url path="../../../../schema/cuentacorriente/saldo/obtener/req_v2016/package-info.java"/>
+      <url path="../../../../../../../../../../org/xmlsoap/schemas/soap/envelope/Fault.java"/>
+      <url path="../../../../schema/cuentacorriente/saldo/obtener/resp_v2016/ObjectFactory.java"/>
+      <url path="../../../../schema/cuentacorriente/saldo/obtener/req_v2016/ObjectFactory.java"/>
+      <url path="../../../../schema/cuentacorriente/saldo/obtener/resp_v2016/RespMensajeTYPE.java"/>
+      <url path="../../../../schema/cuentacorriente/saldo/obtener/resp_v2016/LineaCreditoHeaderTYPE.java"/>
+      <url path="../../../../../../../common/schema/clientservice/CommerceTYPE.java"/>
+      <url path="../../../../schema/cuentacorriente/saldo/obtener/req_v2016/CuentaCorrienteSaldoObtenerReqParamTYPE.java"/>
+      <url path="CuentaCorrienteSaldoObtenerPt.java"/>
+      <url path="../../../../../../../common/schema/clientservice/package-info.java"/>
+      <url path="../../../../../../../../../../org/xmlsoap/schemas/soap/envelope/ObjectFactory.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MIME"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="CuentaCorrienteSaldoObtenerService.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_ENABLED"/>
+      <list n="PROXY_CLIENTS">
+         <url path="CuentaCorrienteSaldoObtenerPortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="http" host="127.0.0.1" port="8888" path="/SodimacService-CuentaCorrienteSaldoObtener-context-root/CuentaCorrienteSaldoObtenerPort" query="WSDL"/>
+      <hash n="PROXY_PORTS">
+         <hash n="CuentaCorrienteSaldoObtenerPort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="com.falabella.mdwcorp.sod.cl.osb.wsdl.cuentacorriente.saldo.obtener_v1.CuentaCorrienteSaldoObtenerPt"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="CuentaCorrienteSaldoObtenerPort"/>
+            <hash n="OPERATIONS">
+               <hash n="CuentaCorrienteSaldoObtenerOp">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_POLICY">
+                  <value n="addressing"/>
+                  <hash n="GLOBAL_CONFIG_PROPERTIES"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <list n="wsconfig"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="127.0.0.1" port="8888" path="/SodimacService-CuentaCorrienteSaldoObtener-context-root/CuentaCorrienteSaldoObtenerPort"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="CuentaCorrienteSaldoObtenerService"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Cuentacorriente/Saldo/Obtener-v1.0"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../../../../../../CuentaCorrienteSaldoObtenerServiceClient.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST">
+         <url path="CuentaCorrienteSaldoObtenerPort4.xsd"/>
+         <url path="CuentaCorrienteSaldoObtenerPort3.xsd"/>
+         <url path="CuentaCorrienteSaldoObtenerPort2.xsd"/>
+         <url path="CuentaCorrienteSaldoObtenerPort1.xsd"/>
+      </list>
+      <url n="PROXY_WSDL_URL" path="CuentaCorrienteSaldoObtenerService.wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Cuentacorriente/Saldo/Obtener-v1.0}CuentaCorrienteSaldoObtenerPt"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Cuentacorriente/Saldo/Obtener-v1.0}CuentaCorrienteSaldoObtenerPortBinding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BOUND_OPERATION" v="com.falabella.mdwcorp.sod.cl.osb.schema.cuentacorriente.saldo.obtener.resp_v2016.CuentaCorrienteSaldoObtenerExpRespTYPE.CuentaCorrienteSaldoObtenerOp.com.falabella.mdwcorp.sod.cl.osb.schema.cuentacorriente.saldo.obtener.req_v2016.CuentaCorrienteSaldoObtenerExpReqTYPE"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="fcbd14ae-0155-1000-854d-ac1201f10f23"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="CuentaCorrienteSaldoObtenerPort"/>
+               <value n="PORT_BINDING_NAME" v="{http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Cuentacorriente/Saldo/Obtener-v1.0}CuentaCorrienteSaldoObtenerPortBinding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="com.falabella.mdwcorp.sod.cl.osb.schema.cuentacorriente.saldo.obtener.resp_v2016.CuentaCorrienteSaldoObtenerExpRespTYPE.cuentaCorrienteSaldoObtenerOp.com.falabella.mdwcorp.sod.cl.osb.schema.cuentacorriente.saldo.obtener.req_v2016.CuentaCorrienteSaldoObtenerExpReqTYPE"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="127.0.0.1" port="8888" path="/SodimacService-CuentaCorrienteSaldoObtener-context-root/CuentaCorrienteSaldoObtenerPort"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Cuentacorriente/Saldo/Obtener-v1.0}CuentaCorrienteSaldoObtenerPt"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="com.falabella.mdwcorp.sod.cl.osb.wsdl.cuentacorriente.saldo.obtener_v1.CuentaCorrienteSaldoObtenerPtImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="com.falabella.mdwcorp.sod.cl.osb.wsdl.cuentacorriente.saldo.obtener_v1.CuentaCorrienteSaldoObtenerPt"/>
+               <value n="PT_TOP_DOWN_GENERATED_SEI_NAME" v="com.falabella.mdwcorp.sod.cl.osb.wsdl.cuentacorriente.saldo.obtener_v1.CuentaCorrienteSaldoObtenerPt"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../../../../../../CuentaCorrienteSaldoObtenerServiceClient.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://mdwcorp.falabella.com/SOD/CL/OSB/wsdl/Cuentacorriente/Saldo/Obtener-v1.0"/>
+         <value n="WS_URI" v="CuentaCorrienteSaldoObtenerService"/>
+         <url n="WS_WSDL_FILE" path="CuentaCorrienteSaldoObtenerService.wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+   </hash>
+</jdevws:WebServiceProxy>

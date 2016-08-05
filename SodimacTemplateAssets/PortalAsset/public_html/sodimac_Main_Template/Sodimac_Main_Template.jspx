@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:wcdc="http://xmlns.oracle.com/webcenter/spaces/taglib">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <af:xmlContent>
+        <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+            <display-name>Mosaic Bootstrap Template</display-name>
+            <facet>
+                <facet-name>content</facet-name>
+            </facet>
+            <attribute>
+                <attribute-name>themeColor</attribute-name>
+                <attribute-class>java.lang.String</attribute-class>
+                <default-value>#{not empty WCAppContext.currentPageTemplate.attributesMap['themeColor'].value ?
+                               WCAppContext.currentPageTemplate.attributesMap['themeColor'].value : 'body-green'}</default-value>
+            </attribute>
+        </component>
+    </af:xmlContent>
+    <af:pageTemplateDef var="attrs">
+        <af:panelGroupLayout id="mainpglwrapper" layout="default"
+                             styleClass="#{wcpContent.isContributionMode ? 'WCPortalCC' : ''} WCNonEditableArea #{attrs.themeColor}">
+            <meta content="width=device-width, initial-scale=1" name="viewport"/>
+            <!-- Begin CSS section -->
+            <!-- Bootstrap Core CSS -->
+            <link href="/webcenter/portal/css/bootstrap.css" rel="stylesheet"/>
+            <!-- Custom CSS -->
+            <link href="/webcenter/portal/css/small-business.css" rel="stylesheet"/>
+            <!-- End CSS section -->
+            <!--Begin required start portal template start components-->
+            <af:panelGroupLayout id="pt_pre" inlineStyle="display:none;" layout="vertical">
+                <wcdc:siteTemplateMetadata type="start"/>
+            </af:panelGroupLayout>
+            <af:panelGroupLayout id="pt_tb" styleClass="WCEditableArea">
+                <wcdc:portalToolbar id="ptbdc"/>
+            </af:panelGroupLayout>
+            <!--End required start portal template start components-->
+            <div class="WCSiteTemplateRoot" id="wrapper">
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                             
+                            <a class="navbar-brand" href="#">
+                                <img src="/webcenter/portal/images/u19.png" alt="Sodimac Logo"/></a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <af:iterator id="i1"
+                                             value="#{boilerBean.navigationModelPath == null ? navigationContext.defaultNavigationModel.listModel['startNode=/, includeStartNode=false'] : navigationContext.navigationModel[modelPath=boilerBean.navigationModelPath].listModel['startNode=/, includeStartNode=false']}"
+                                             var="node1">
+                                    <af:switcher facetName="#{( node1.separator ? 'separatorFacet' : (boilerBean.navigationModelPath == null ? (o_w_w_sc_i_v_b_spacesPageTemplate.excludedPage[navigationContext.defaultNavigationModel.node['/'].parametersRaw['excludedPages']][node1.path] ? 'null' : (!empty node1.children or node1.navigable ? 'menuItemFacet' : 'null')) : (o_w_w_sc_i_v_b_spacesPageTemplate.excludedPage[navigationContext.navigationModel[modelPath=boilerBean.navigationModelPath].node['/'].parametersRaw['excludedPages']][node1.path] ? 'null' : (!empty node1.children or node1.navigable ? 'menuItemFacet' : 'null')) ) )}"
+                                                 id="s1">
+                                        <f:facet name="separatorFacet"/>
+                                        <f:facet name="menuItemFacet">
+                                            <af:switcher facetName="#{!(!empty node1.parametersRaw['visibilityCondition'] and !o_w_w_sc_i_v_b_spacesPageTemplate.check[node1.parametersRaw['visibilityCondition']]) ? (empty node1.children ? 'navigationItemFacet' : 'navigationMenuFacet') : 'null'}"
+                                                         id="s3">
+                                                <f:facet name="navigationItemFacet">
+                                                    <li class="#{node1.selected == 'true' ? 'active' : ''}">
+                                                        <a class="bg-hover-color menutext"
+                                                           href="#{facesContext.externalContext.requestContextPath}#{node1.goLinkPrettyUrl}">
+                                                            <span>#{node1.title}</span></a>
+                                                    </li>
+                                                </f:facet>
+                                                <f:facet name="navigationMenuFacet">
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle bg-hover-color" href="#"
+                                                           data-toggle="dropdown">
+                                                            <span>#{node1.title}</span><b class="caret"></b></a>
+                                                        <ul class="dropdown-menu">
+                                                            <af:iterator id="i2" value="#{node1.children}" var="node2">
+                                                                <li>
+                                                                    <a class="bg-hover-color"
+                                                                       href="#{facesContext.externalContext.requestContextPath}#{node2.goLinkPrettyUrl}">
+                                                                        <span>#{node2.title}</span></a>
+                                                                </li>
+                                                            </af:iterator>
+                                                        </ul>
+                                                    </li>
+                                                </f:facet>
+                                            </af:switcher>
+                                        </f:facet>
+                                    </af:switcher>
+                                </af:iterator>
+                            </ul>
+                            <ul class="nav navbar-nav user-info-mobile">
+                                <li>
+                                    <a href="#">Telephone</a>
+                                </li>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                                <li>
+                                    <a href="#">Agustin Espinosa</a>
+                                </li>
+                            </ul>
+                            <div class="user-info">
+                                <div class="earphone">
+                                    <img src="/webcenter/portal/images/phone-icon.png" class="img-responsive" alt="Phone_Icon"/>
+                                </div>
+                                <div class="question">
+                                    <img src="/webcenter/portal/images/question-mark.png" class="img-responsive" alt="Question_Icon"/>
+                                </div>
+                                <div class="user" style="padding: 9px 0 8px 10px;">
+                                    <img src="/webcenter/portal/images/user.png" class="img-responsive" alt="User_Icon">
+                                        <div style=" display: inline-block; word-wrap: break-word; width: 75px;color: #a3a3a3;">
+                                            <a href="#" style="color:#a3a3a3;">Agustin Espinosa</a>
+                                        </div>
+                                    </img>
+                                </div>
+                                <a class="circle"
+                                   style="padding: 5px 11px;color: #fff; font-weight: 600; display: inline-block; margin-top: 12px;">3</a>
+                            </div>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container -->
+                </nav><!-- Page Content -->
+                <div class="container">
+                    <!-- Heading Row -->
+                    <af:panelGroupLayout id="container" layout="vertical" styleClass="WCEditableArea WCContent"
+                                         inlineStyle="background-color:white;">
+                        <af:skipLinkTarget/>
+                        <af:facetRef facetName="content"/>
+                    </af:panelGroupLayout>
+                </div>
+                <!-- /.container -->
+                <footer>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="footer-left">
+                                    <a class="footer-logo" href="#">
+                                        <img src="/webcenter/portal/images/u19.png" alt="Sodimac Logo"/></a>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="footer-right">
+                                    <div class="footer-right-left">
+                                        <img src="/webcenter/portal/images/u13.png"
+                                             style="width:22px;height:22px;border: 3px solid #fff;border-radius:6px"
+                                             alt="Contacto">
+                                            <span class="footerText">Contacto</span>
+                                            <div style="margin:10px  0px;">
+                                                <img src="/webcenter/portal/images/u23.png"
+                                                     style="width:22px;height:22px;border: 3px solid #fff;border-radius:6px"
+                                                     alt="Atenci Comercial">
+                                                    <span class="footerText">Atenci&#243;n Comercial</span>
+                                                </img>
+                                            </div>
+                                        </img>
+                                    </div>
+                                    <div class="footer-right-right">
+                                        <a class="btn btn-lg" href="#" style="border: 1px solid #fff;  color:#fff;height:50px;width:169px;    font-family: 'ArialMT', 'Arial';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px; text-align:center;margin-top:2px;
+        color: white">Reportar Problema</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer><!-- Begin Javascript section -->
+            </div>
+            <script type="text/javascript" language="javascript" src="/webcenter/uilibs/jquery/1.11.1/jquery.min.js">
+            </script>  
+            <script type = "text/javascript" language = "javascript" src = "/webcenter/uilibs/bootstrap/3.2.0/js/bootstrap.min.js"> 
+            </script>
+            <script type="text/javascript" language="javascript" src="/webcenter/portal/js/jquery.js"></script>
+            <!-- Bootstrap Core JavaScript -->
+            <script type="text/javascript">
+              //Script block 
+              if (window.addEventListener) {
+                  /* Modern  browsers */
+                  window.addEventListener("load", onLoad, false);
+              }
+              else if (window.attachEvent) {
+                  /* IE */
+                  window.detachEvent("onload", onLoad);
+                  window.attachEvent("onload", onLoad);
+              }
+              else {
+                  window.onload = onLoad;
+              }
+
+              function onLoad() {
+                  $('#wrapper').addClass('#{attrs.themeColor}');
+
+                  //Work around for styling ADF elements and overriding the ADF default styles.
+                  $('#user-nav .ptext span').html('&lt;i class="icon fa fa-users"&gt;&lt;/i&gt;&lt;span class="text hidden-xs1 hidden-sm1"&gt;#{uib_o_w_s_r_Spaces.LABEL_COMMUNITIES}&lt;/span&gt;');
+                  $('#user-nav .ftext span').html('&lt;i class="icon fa fa-heart"&gt;&lt;/i&gt;&lt;span class="text hidden-xs1 hidden-sm1"&gt;#{uib_o_w_w_r_WebCenter.LABEL_FAVORITES}&lt;/span&gt;');
+                  $('#user-nav .adtext span').html('&lt;i class="icon fa fa-gears"&gt;&lt;/i&gt;&lt;span class="text hidden-xs1 hidden-sm1"&gt;#{uib_o_w_w_r_WebCenter.GLOBAL_LINK_ADMINISTRATION}&lt;/span&gt;');
+                  $('#user-nav .actIcon span').html('&lt;i class="icon fa fa-gear"&gt;&lt;/i&gt;&lt;span class="text hidden-xs1 hidden-sm1"&gt;#{uib_o_w_w_r_WebCenter.LABEL_ACTIONS}&lt;/span&gt;');
+                  $('#user-nav .htext span').html('&lt;i class="icon fa fa-question"&gt;&lt;/i&gt;&lt;span class="text hidden-xs1 hidden-sm1"&gt;#{uib_o_w_w_r_WebCenter.LABEL_HELP}&lt;/span&gt;');
+                  $('#user-nav .prtext span').html('&lt;i class="icon fa fa-user"&gt;&lt;/i&gt;&lt;span class="text hidden-xs1"&gt;#{security.userDisplayName}&lt;/span&gt;');
+                  $('#user-nav .litext span').html('&lt;i class="icon fa fa-sign-in"&gt;&lt;/i&gt;&lt;span class="text hidden-xs1 hidden-sm1"&gt;#{uib_o_w_w_r_WebCenter.GLOBAL_LINK_LOGIN}&lt;/span&gt;');
+                  $('#user-nav .srtext span').html('&lt;i class="icon fa fa-edit"&gt;&lt;/i&gt;&lt;span class="text hidden-xs1 hidden-sm1"&gt;#{uib_o_w_w_r_WebCenter.GLOBAL_LINK_SELFREG}&lt;/span&gt;');
+              }
+            </script>
+            <script type="text/javascript">
+              // Javascript force onLoad if it is not loaded, this is needed in case of PPR reloading --&gt;
+              var loaded = $('#wrapper').hasClass('#{attrs.themeColor}');
+                  if (!loaded) {
+                      onLoad();
+                  }
+            </script>
+            <!-- End Javascript section -->
+            <!--Begin required portal template start components-->
+            <af:panelGroupLayout id="pt_post" inlineStyle="display:none;" layout="vertical">
+                <wcdc:siteTemplateMetadata type="end"/>
+            </af:panelGroupLayout>
+            <!--End required portal template start components-->
+        </af:panelGroupLayout>
+    </af:pageTemplateDef>
+</jsp:root>

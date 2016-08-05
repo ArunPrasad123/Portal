@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:skin xmlns:ns0="http://xmlns.oracle.com/webcenter/assetpublishing/assetdef">
+   <name>sodimacSkin</name>
+   <displayName>sodimacSkin</displayName>
+   <resourceBundle>portal.skinBundle</resourceBundle>
+   <sourceMetadataFilePath>sodimacSkin/sodimacSkin.css</sourceMetadataFilePath>
+   <skinId>sodimacSkin.desktop</skinId>
+   <skinFamily>sodimacSkin</skinFamily>
+   <skinExtends>alta-v1.desktop</skinExtends>
+</ns0:skin>

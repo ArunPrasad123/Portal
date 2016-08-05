@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core" xmlns:c="http://java.sun.com/jsp/jstl/core">
+  <c:set var="viewcontrollerBundle" value="#{adfBundle['com.falabella.sodimac.view.ViewControllerBundle']}"/>
+  <af:panelGroupLayout id="pgl8" layout="vertical" styleClass="whiteBg"
+                       binding="#{backingBeanScope.AccountStatusBean.pgl8}">
+    <af:panelGroupLayout id="pgl7" styleClass="whiteBg" binding="#{backingBeanScope.AccountStatusBean.pgl7}">
+      <af:panelGridLayout id="pgl4" styleClass="pgl4" binding="#{backingBeanScope.AccountStatusBean.pgl4}">
+        <af:gridRow marginTop="0px" height="auto" id="gr4" binding="#{backingBeanScope.AccountStatusBean.gr4}">
+          <af:gridCell marginStart="0px" width="50%" id="gc6" styleClass="gc6"
+                       binding="#{backingBeanScope.AccountStatusBean.gc6}">
+            <af:outputText value="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.ResumendeSaldo']}" id="ot3"
+                           styleClass="ot3" binding="#{backingBeanScope.AccountStatusBean.ot3}"/>
+          </af:gridCell>
+          <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc7" halign="end" styleClass="gc7"
+                       binding="#{backingBeanScope.AccountStatusBean.gc7}"/>
+        </af:gridRow>
+        <af:gridRow marginTop="0px" height="auto" id="gr5" binding="#{backingBeanScope.AccountStatusBean.gr5}">
+          <af:gridCell marginStart="0px" columnSpan="2" marginEnd="0px" id="gc8"
+                       styleClass="gc8" halign="stretch" binding="#{backingBeanScope.AccountStatusBean.gc8}">
+            <af:table value="#{bindings.list.collectionModel}" var="row" rows="#{bindings.list.rangeSize}"
+                      emptyText="#{bindings.list.viewable ? 'No data to display.' : 'Access Denied.'}"
+                      fetchSize="#{bindings.list.rangeSize}" id="t1" columnStretching="last" autoHeightRows="0"
+                      styleClass="t1_sumtable" rowBandingInterval="0"
+                      binding="#{backingBeanScope.AccountStatusBean.t1}">
+              <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.TipoDeCredito']}" id="c1" width="151" styleClass="t1_columnFirst"
+                         footerClass="t1_sumTableFooter" headerClass="t1_sumTableHeader"
+                         inlineStyle="border-color:black;height:25px;     ">
+                <af:outputText value="#{row['tipoDeCr&#233;dito']}"
+                               shortDesc="#{bindings.list.hints['tipoDeCr&#233;dito'].tooltip}"
+                               styleClass="tabledataclass" id="ot5"/>
+                <f:facet name="footer">
+                  <af:outputLabel value="#{bindings.totalTipoDeCr&#233;dito.inputValue}" id="ol1" binding="#{backingBeanScope.AccountStatusBean.ol1}">
+                    <af:convertNumber type="currency" currencySymbol="$"/>
+                  </af:outputLabel>
+                </f:facet>
+              </af:column>
+              <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.Cupo']}" id="c2" width="178" footerClass="t1_sumTableFooter"
+                         headerClass="t1_sumTableHeader" styleClass="t1_column"
+                         inlineStyle="border-color:black;height:25px;">
+                <af:outputText value="#{row.cupo}" shortDesc="#{bindings.list.hints.cupo.tooltip}" id="ot6"
+                               styleClass="tabledataclass">
+                  <af:convertNumber groupingUsed="true" pattern="#{bindings.list.hints.cupo.format}" type="currency"
+                                    currencySymbol="$" locale="es_CL"/>
+                </af:outputText>
+                <f:facet name="footer">
+                  <af:outputLabel value="#{bindings.totalCupo.inputValue}" id="ol2"
+                                  binding="#{backingBeanScope.AccountStatusBean.ol2}">
+                    <af:convertNumber type="currency" currencySymbol="$" locale="es_CL"/>
+                  </af:outputLabel>
+                </f:facet>
+              </af:column>
+              <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.Utilizado']}" id="c3" width="184" footerClass="t1_sumTableFooter"
+                         headerClass="t1_sumTableHeader" styleClass="t1_column"
+                         inlineStyle="border-color:black;height:25px;">
+                <af:outputText value="#{row.utilizado}" styleClass="tabledataclass"
+                               shortDesc="#{bindings.list.hints.utilizado.tooltip}" id="ot7">
+                  <af:convertNumber groupingUsed="true" pattern="#{bindings.list.hints.utilizado.format}"
+                                    currencySymbol="$" type="currency" locale="es_CL"/>
+                </af:outputText>
+                <f:facet name="footer">
+                  <af:outputLabel value="#{bindings.totalUtilizado.inputValue}" id="ol3"
+                                  binding="#{backingBeanScope.AccountStatusBean.ol3}">
+                    <af:convertNumber type="currency" currencySymbol="$" locale="es_CL"/>
+                  </af:outputLabel>
+                </f:facet>
+              </af:column>
+              <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.PorFacturar']}" id="c4" width="169" footerClass="t1_sumTableFooter"
+                         headerClass="t1_sumTableHeader" styleClass="t1_column"
+                         inlineStyle="border-color:black;height:25px;">
+                <af:outputText value="#{row.porFacturar}" styleClass="tabledataclass"
+                               shortDesc="#{bindings.list.hints.porFacturar.tooltip}" id="ot8">
+                  <af:convertNumber groupingUsed="true" pattern="#{bindings.list.hints.porFacturar.format}"
+                                    type="currency" currencySymbol="$" locale="es_CL"/>
+                </af:outputText>
+                <f:facet name="footer">
+                  <af:outputLabel value="#{bindings.totalPorFacturar.inputValue}" id="ol4" binding="#{backingBeanScope.AccountStatusBean.ol4}">
+                    <af:convertNumber type="currency" currencySymbol="$" locale="es_CL"/>
+                  </af:outputLabel>
+                </f:facet>
+              </af:column>
+              <af:column headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.Disponible']}" id="c5" width="35" footerClass="t1_sumTableFooterLast"
+                         headerClass="t1_sumTableHeaderLast" styleClass="t1_column"
+                         inlineStyle="border-bottom-color:black;;height:25px;">
+                <af:outputText value="#{row.disponible}" styleClass="tabledataclass"
+                               shortDesc="#{bindings.list.hints.disponible.tooltip}" id="ot9">
+                  <af:convertNumber groupingUsed="true" pattern="#{bindings.list.hints.disponible.format}"
+                                    type="currency" currencySymbol="$" locale="es_CL"/>
+                </af:outputText>
+                <f:facet name="footer">
+                  <af:outputLabel value="#{bindings.totalDisponible.inputValue}" id="ol5"
+                                  binding="#{backingBeanScope.AccountStatusBean.ol5}">
+                    <af:convertNumber type="currency" currencySymbol="$" locale="es_CL"/>
+                  </af:outputLabel>
+                </f:facet>
+              </af:column>
+            </af:table>
+          </af:gridCell>
+        </af:gridRow>
+        <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr6"
+                    binding="#{backingBeanScope.AccountStatusBean.gr6}">
+          <af:gridCell marginStart="0px" width="50%" id="gc9" styleClass="gc9"
+                       binding="#{backingBeanScope.AccountStatusBean.gc9}">
+            <af:outputText value="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.Informaci&#243;nactualizadaal']}" id="ot4"
+                           styleClass="ot4" binding="#{backingBeanScope.AccountStatusBean.ot4}"/>
+            <af:outputText value="#{currentDate}" id="ot17" binding="#{backingBeanScope.AccountStatusBean.ot17}"
+                           inlineStyle="    font-family: 'Arial-ItalicMT', 'Arial Italic', 'Arial';     font-weight: 400;     font-style: italic;     font-size: 14px;     color: #666666;;margin-left:10px">
+              <af:convertDateTime type="date" timeZone="CLT" pattern="dd/MM/YYY"/>
+            </af:outputText>
+          </af:gridCell>
+          <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc10" inlineStyle="padding:10px" halign="end"
+                       binding="#{backingBeanScope.AccountStatusBean.gc10}">
+            <af:button text="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.Solicitarevaluaci&#243;n']}" id="b2"
+                       
+                       styleClass="b2 xf1" binding="#{backingBeanScope.AccountStatusBean.b2}"/>
+          </af:gridCell>
+        </af:gridRow>
+      </af:panelGridLayout>
+    </af:panelGroupLayout>
+    <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="pgl1" inlineStyle="margin-top:10px"
+                         binding="#{backingBeanScope.AccountStatusBean.pgl1}">
+      <af:panelGroupLayout id="pgl11" styleClass="pgl11" binding="#{backingBeanScope.AccountStatusBean.pgl11}">
+        <af:panelGridLayout id="pgl10" inlineStyle="width:900px" binding="#{backingBeanScope.AccountStatusBean.pgl10}">
+          <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr2"
+                      binding="#{backingBeanScope.AccountStatusBean.gr2}">
+            <af:gridCell marginStart="0px" width="50%" id="gc3" binding="#{backingBeanScope.AccountStatusBean.gc3}">
+              <af:outputText value="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.FacturasPendientesdePago']}" id="ot14" styleClass="ot14"
+                             binding="#{backingBeanScope.AccountStatusBean.ot14}"/>
+            </af:gridCell>
+            <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc4" halign="end" valign="bottom"
+                         binding="#{backingBeanScope.AccountStatusBean.gc4}">
+              <af:link text="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.Vertodas']}" id="l3" styleClass="viewall"
+                       binding="#{backingBeanScope.AccountStatusBean.l3}"
+                       actionListener="#{backingBeanScope.AccountStatusBean.verTodasAction}" partialSubmit="true"/>
+              <af:link text="espalda" id="l5" binding="#{backingBeanScope.AccountStatusBean.l5}" styleClass="viewall"
+                       actionListener="#{backingBeanScope.AccountStatusBean.espaldaAction}" visible="false"/>
+            </af:gridCell>
+          </af:gridRow>
+        </af:panelGridLayout>
+      </af:panelGroupLayout>
+      <af:panelGroupLayout id="pgl9" inlineStyle="margin-top:10px" binding="#{backingBeanScope.AccountStatusBean.pgl9}">
+        <af:spacer width="900" height="1" id="s1" inlineStyle="background-color:#CCCCCC;"
+                   binding="#{backingBeanScope.AccountStatusBean.s1}"/>
+      </af:panelGroupLayout>
+      <af:panelGroupLayout id="pgl5" styleClass="pgl5" binding="#{backingBeanScope.AccountStatusBean.pgl5}">
+        <af:panelGridLayout id="pgl2" styleClass="pgl2" binding="#{backingBeanScope.AccountStatusBean.pgl2}">
+          <af:gridRow marginTop="0px" height="auto" marginBottom="0px" id="gr1"
+                      binding="#{backingBeanScope.AccountStatusBean.gr1}">
+            <af:gridCell marginStart="0px" width="50%" id="gc1" binding="#{backingBeanScope.AccountStatusBean.gc1}"/>
+            <af:gridCell marginStart="0px" width="50%" marginEnd="0px" id="gc2" halign="end"
+                         binding="#{backingBeanScope.AccountStatusBean.gc2}">
+              <af:link text="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.ExportaraExcel']}" id="l2"
+                       inlineStyle="font-size: 15px;     text-decoration: underline;  font-family: 'ArialMT', 'Arial';     font-weight: 400;     font-style: normal;      color: #333333;     text-align: left;     line-height: normal;"
+                       binding="#{backingBeanScope.AccountStatusBean.l2}"/>
+            </af:gridCell>
+          </af:gridRow>
+        </af:panelGridLayout>
+      </af:panelGroupLayout>
+      <af:panelGroupLayout id="pgl3" inlineStyle="margin-top:10px;background-color:white" layout="vertical"
+                           binding="#{backingBeanScope.AccountStatusBean.pgl3}" partialTriggers="t2">
+        <af:table value="#{bindings.documents1.collectionModel}" var="row" rows="#{bindings.documents1.rangeSize}"
+                  emptyText="#{bindings.documents1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                  rowBandingInterval="0" id="t2" styleClass="t2_documentdetails" columnStretching="last"
+                  autoHeightRows="10"
+                  fetchSize="10" scrollPolicy="page" binding="#{backingBeanScope.AccountStatusBean.t2}" immediate="true">
+          <af:column sortProperty="#{bindings.documents1.hints.numeroDocumento.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.N&#186;Documento']}" id="c8"
+                     headerClass="t1_sumTableHeaderlLeft" styleClass="sumColContent"
+                     width="134" inlineStyle="border-color:black;">
+            <af:outputText value="#{row.numeroDocumento}"
+                           shortDesc="#{bindings.documents1.hints.numeroDocumento.tooltip}" id="ot1"/>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.nombreUnidad.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.Nombretienda']}" id="c9" styleClass="sumColContent"
+                     headerClass="t1_sumTableHeaderlLeft"
+                     width="133" inlineStyle="border-color:black;">
+            <af:outputText value="#{row.nombreUnidad}" shortDesc="#{bindings.documents1.hints.nombreUnidad.tooltip}"
+                           id="ot2"/>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.saldo.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.Saldo']}" id="c10"
+                     styleClass="sumColContent" headerClass="t1_sumTableHeaderlLeft" width="84"
+                     inlineStyle="border-color:black;">
+            <af:outputText value="#{row.saldo}" shortDesc="#{bindings.documents1.hints.saldo.tooltip}" id="ot10">
+              <af:convertNumber groupingUsed="true" pattern="#{bindings.documents1.hints.saldo.format}" locale="es_CL"
+                                type="currency" currencySymbol="$"/>
+            </af:outputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.documentoFechaEmision.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.FechaEmisi&#243;n']}" id="c11" styleClass="sumColContent"
+                     headerClass="t1_sumTableHeaderlLeft"
+                     width="139" inlineStyle="border-color:black;">
+            <af:outputText value="#{row.documentoFechaEmision}"
+                           shortDesc="#{bindings.documents1.hints.documentoFechaEmision.tooltip}" id="ot11">
+              <af:convertDateTime pattern="#{bindings.documents1.hints.documentoFechaEmision.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.documentoFechaVencimiento.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.FechaVencimiento']}" id="c12" styleClass="sumColContent"
+                     headerClass="t1_sumTableHeaderlLeft"
+                     width="165" inlineStyle="border-color:black;">
+            <af:outputText value="#{row.documentoFechaVencimiento}"
+                           shortDesc="#{bindings.documents1.hints.documentoFechaVencimiento.tooltip}" id="ot12">
+              <af:convertDateTime pattern="#{bindings.documents1.hints.documentoFechaVencimiento.format}"/>
+            </af:outputText>
+          </af:column>
+          <af:column sortProperty="#{bindings.documents1.hints.diasVencido.name}" sortable="true"
+                     headerText="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.D&#237;asvencido']}" id="c13" styleClass="sumColContent"
+                     headerClass="t1_sumTableHeaderLast"
+                     width="43" inlineStyle="border-bottom-color:black">
+            <af:outputText value="#{row.diasVencido}" shortDesc="#{bindings.documents1.hints.diasVencido.tooltip}"
+                           id="ot13"/>
+          </af:column>
+          <af:column id="c14" width="24" styleClass="sumColContent" headerClass="sumTableHeader" helpTopicId="/images/"
+                     rendered="false">
+            <af:panelGroupLayout id="pgl51" layout="horizontal">
+              <af:link id="l1" icon="/images/u413.png" text="PDF" iconPosition="top" inlineStyle="color:Black;"
+                       styleClass="AFMyCommandImageSize"/>
+              <af:spacer width="10" height="10" id="s2"/>
+              <af:link id="l4" icon="/images/u413.png" text="PDF DTE" iconPosition="top" inlineStyle="color:Black;"
+                       styleClass="AFMyCommandImageSize"/>
+            </af:panelGroupLayout>
+          </af:column>
+        </af:table>
+        <af:panelGroupLayout id="pgl6" layout="vertical" halign="right" inlineStyle="width:900px; padding-top:15px"
+                             binding="#{backingBeanScope.AccountStatusBean.pgl6}">
+          <af:button text="#{viewcontrollerBundle['com.felabella.sodimac.view.accountstatus.PagodeFacturas']}" id="b1"
+                     inlineStyle="width:296px;height:45px;font-size:18px; color:#FFFFFF; font-family:'ArialMT', 'Arial'; font-weight:400; font-style:normal; text-align:center; line-height:normal; background-color:#666666; background-repeat:no-repeat;border-radius:10px;background-image:none;text-shadow:none"
+                     binding="#{backingBeanScope.AccountStatusBean.b1}"/>
+        </af:panelGroupLayout>
+      </af:panelGroupLayout>
+    </af:panelGroupLayout>
+  </af:panelGroupLayout>
+  <!--oracle-jdev-comment:auto-binding-backing-bean-name:AccountStatusBean-->
+</jsp:root>

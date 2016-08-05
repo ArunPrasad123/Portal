@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://127.0.0.1:8888/SodimacService-ClienteEmpresaDocumentosObtener-context-root/ClienteEmpresaDocumentosObtenerPort?WSDL#%7Bhttp%3A%2F%2Fmdwcorp.falabella.com%2FSOD%2FCL%2FOSB%2Fwsdl%2FClienteempresa%2FDocumentos%2FObtener-v1.0%7DClienteEmpresaDocumentosObtenerService"
+          uri="http://127.0.0.1:8888/SodimacService-ClienteEmpresaDocumentosObtener-context-root/ClienteEmpresaDocumentosObtenerPort?WSDL"/>
+</catalog>
