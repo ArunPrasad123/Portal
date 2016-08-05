@@ -86,8 +86,20 @@
    </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
       <list n="technologyScope">
+         <string v="Ant"/>
          <string v="WebCenterPortalServerExtension"/>
          <string v="XML"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.compiler.ant.AntConfiguration">
+      <value n="makeTarget" v="all"/>
+      <url n="projectBuildfile" path="build.xml"/>
+      <list n="targetList">
+         <string v="all"/>
+         <string v="clean"/>
+         <string v="compile"/>
+         <string v="copy"/>
+         <string v="deploy"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
@@ -182,8 +194,8 @@
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="SodimacExtension-PortalSharedLibrary"/>
-      <value n="j2eeWebContextRoot" v="SodimacExtension-PortalSharedLibrary"/>
+      <value n="j2eeWebAppName" v="SodimacExtension-PortalSharedLibrary-webapp"/>
+      <value n="j2eeWebContextRoot" v="SodimacExtension-PortalSharedLibrary-context-root"/>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectPaths">
       <url n="outputDirectory" path="classes/"/>

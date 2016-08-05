@@ -81,6 +81,7 @@
          <string v="ADF_FACES"/>
          <string v="ADFc"/>
          <string v="ADFm"/>
+         <string v="Ant"/>
          <string v="HTML"/>
          <string v="JAVASCRIPT"/>
          <string v="JSF"/>
@@ -88,6 +89,17 @@
          <string v="Java"/>
          <string v="TRINIDAD"/>
          <string v="XML"/>
+      </list>
+   </hash>
+   <hash n="oracle.jdeveloper.compiler.ant.AntConfiguration">
+      <value n="makeTarget" v="all"/>
+      <url n="projectBuildfile" path="build.xml"/>
+      <list n="targetList">
+         <string v="all"/>
+         <string v="clean"/>
+         <string v="compile"/>
+         <string v="copy"/>
+         <string v="deploy"/>
       </list>
    </hash>
    <hash n="oracle.jdeveloper.compiler.OjcConfiguration">
@@ -187,21 +199,13 @@
       </list>
    </hash>
    <hash n="oracle.jdeveloper.model.J2eeSettings">
-      <value n="j2eeWebAppName" v="SodimacExtension-Deployer"/>
-      <value n="j2eeWebContextRoot" v="SodimacExtension-Deployer"/>
+      <value n="j2eeWebAppName" v="SodimacExtension-Deployer-webapp"/>
+      <value n="j2eeWebContextRoot" v="SodimacExtension-Deployer-context-root"/>
    </hash>
    <hash n="oracle.jdevimpl.config.JProjectLibraries">
       <list n="exportedReferences">
          <hash>
             <value n="id" v="Taskflows.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ClienteEmpresaDocumentosObtenerService-Client.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="CuentaCorrienteSaldoObtenerService-Client.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>
@@ -216,37 +220,11 @@
                <value n="id" v="Taskflows.jar"/>
                <value n="locked" v="true"/>
             </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../../SodimacService/ClienteEmpresaDocumentosObtenerServiceClient/deploy/ClienteEmpresaDocumentosObtenerService-Client.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="ClienteEmpresaDocumentosObtenerService-Client.jar"/>
-               <value n="id" v="ClienteEmpresaDocumentosObtenerService-Client.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
-            <hash>
-               <list n="classPath">
-                  <url path="../../SodimacService/CuentaCorrienteSaldoObtenerServiceClient/deploy/CuentaCorrienteSaldoObtenerService-Client.jar" jar-entry=""/>
-               </list>
-               <value n="deployedByDefault" v="true"/>
-               <value n="description" v="CuentaCorrienteSaldoObtenerService-Client.jar"/>
-               <value n="id" v="CuentaCorrienteSaldoObtenerService-Client.jar"/>
-               <value n="locked" v="true"/>
-            </hash>
          </list>
       </hash>
       <list n="libraryReferences">
          <hash>
             <value n="id" v="Taskflows.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="ClienteEmpresaDocumentosObtenerService-Client.jar"/>
-            <value n="isJDK" v="false"/>
-         </hash>
-         <hash>
-            <value n="id" v="CuentaCorrienteSaldoObtenerService-Client.jar"/>
             <value n="isJDK" v="false"/>
          </hash>
       </list>

@@ -51,11 +51,8 @@ public class CurrentAccoountStatus {
         URL clienteEmpresaDocumentosObtenerService =null;
         
         try {
-//            cuentaCorrienteSaldoObtenerServiceUrl=  new URL("http://desacloud860.falabella.cl/CuentaCorrienteSaldoObtener/CuentaCorrienteSaldoObtenerPort?WSDL");
-//            clienteEmpresaDocumentosObtenerService= new URL("http://desacloud860.falabella.cl/ClienteEmpresaDocumentosObtener/ClienteEmpresaDocumentosObtenerPort?WSDL");
-            cuentaCorrienteSaldoObtenerServiceUrl=  new URL("http://localhost:8888/CuentaCorrienteSaldoObtener/CuentaCorrienteSaldoObtenerPort?WSDL");
-            clienteEmpresaDocumentosObtenerService= new URL("http://localhost:8888/ClienteEmpresaDocumentosObtener/ClienteEmpresaDocumentosObtenerPort?WSDL");
-
+            cuentaCorrienteSaldoObtenerServiceUrl=  new URL("http://localhost:7101/SodimacService-CuentaCorrienteSaldoObtener-context-root/CuentaCorrienteSaldoObtenerPort?WSDL");
+            clienteEmpresaDocumentosObtenerService= new URL("http://localhost:7101/SodimacService-ClienteEmpresaDocumentosObtener-context-root/ClienteEmpresaDocumentosObtenerPort?WSDL");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
